@@ -335,7 +335,7 @@
          </div>
          <div class="row justify-content-center mt-5">
             <div class="col-md-6 text-center ftco-animate">
-               <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+               <p><a href="#" class="btn btn-primary py-4 px-5"onclick="downloadPDF()">Download CV</a></p>
             </div>
          </div>
          </div>
@@ -496,6 +496,16 @@
 }
 </style>
       </div>
+      <script>
+    function downloadPDF() {
+      const link = document.createElement("a");
+      link.href = "docs/Girish_CV.pdf"; // Replace with your file path
+      link.download = "Girish_Burade_Resume.pdf"; // This will be the downloaded filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
       <script src="js/jquery.min.js"></script>
       <script src="js/jquery-migrate-3.0.1.min.js"></script>
       <script src="js/popper.min.js"></script>
