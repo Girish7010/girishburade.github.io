@@ -169,7 +169,7 @@
                         </div>
                         <div class="image flex-column" style="max-width: 50%;align-items: center;">
                            <img src="images/oie_OkC1XJtADIPw-removebg-preview.png" alt="aws" style="width: 100%;">
-                           <img src="images/aws-ar.jpg" alt="aws" style="width:292px;">
+                           <img src="images/aws-ar.jpg" alt="aws" style="width:292px;"onclick="opencertificadte()">
                         </div>
                      </div>
                   </div>
@@ -237,7 +237,7 @@
                         <div class="col-md-12 heading-section ftco-animate">
                            <h1 class="big">About</h1>
                            <h2 class="mb-4">About Me</h2>
-                           <p>I have four years of experience in building and managing CI/CD pipelines, automating
+                           <p class="font-weight-bold">I have four years of experience in building and managing CI/CD pipelines, automating
                               infrastructure, improving system reliability, and reducing project costs. I work with tools like
                               Docker, Terraform, and AWS to make workflows smoother and operations more efficient. I'm
                               skilled at working with teams, adapting to changes, and creating scalable solutions to meet business needs.
@@ -256,7 +256,7 @@
                                  (<a href="https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile" target="_blank">Click to verify the badge</a>),<br>
                                  AWS Certified Cloud Practitioner 
                                  (<a href="https://www.credly.com/badges/1bed1a21-9a8d-42f6-8ab1-dd80e39f0ca3/linked_in_profile" target="_blank">Click to verify the badge</a>),<br>
-                                 CCNA 
+                                  CCNA 
                                  </span>
                               </li>
                            </ul>
@@ -509,6 +509,10 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    }
+
+    function opencertificadte() {
+    window.open("https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile","_blank")
     }
   </script>
       <script src="js/jquery.min.js"></script>
