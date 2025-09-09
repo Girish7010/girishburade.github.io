@@ -1,4 +1,4 @@
-This is code for my portfolio ( You Can Download and create your own)
+“This is the source code for my portfolio — feel free to download it, customize the design, and create your own personalized version.”
 ## Portfolio Website Template
 
 A simple, responsive portfolio template you can clone and make your own. It is a static site (HTML/CSS/JS) powered by Bootstrap and a few popular UI libraries.
