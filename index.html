@@ -520,58 +520,7 @@
          </div>
       </div>
    </div>
- <div class="col-md-12 d-flex ftco-animate">
-    <div class="blog-entry hover-lift">
-        <div class="text mt-3 float-right d-block">
-            <h2 class="heading mb-4 text-center">
-               <a href="#">✍️ Top Tech Articles & Thought Leadership</a>
-            </h2>
-            
-            <div class="row">
-                <!-- Article 1: FinOps -->
-                <div class="col-md-4">
-                    <div class="journal-wrap hover-lift">
-                        <div class="journal-text">
-                             <h3><a href="https://medium.com/@girishburade30792" target="_blank">🌐 Cloud FinOps Practitioner Guide</a></h3>
-                             <p>Strategies to reduce AWS costs by 30% without impacting performance. Rightsizing, Spot Instances, and Savings Plans.</p>
-                             <span class="devops-badge">FinOps</span> <span class="devops-badge">AWS</span>
-                             <p><a href="https://medium.com/@girishburade30792" target="_blank" class="btn btn-sm btn-primary mt-2">Read <span class="icon-arrow-right"></span></a></p>
-                        </div>
-                    </div>
-                </div>
 
-                 <!-- Article 2: ECS vs EKS -->
-                <div class="col-md-4">
-                    <div class="journal-wrap hover-lift">
-                        <div class="journal-text">
-                             <h3><a href="https://medium.com/@girishburade30792" target="_blank">🏗️ ECS vs EKS: Real-world Decision</a></h3>
-                             <p>Why we chose ECS on EC2 over EKS for our specific workload. A deep dive into operational overhead vs control.</p>
-                             <span class="devops-badge">Architecture</span>
-                             <p><a href="https://medium.com/@girishburade30792" target="_blank" class="btn btn-sm btn-primary mt-2">Read <span class="icon-arrow-right"></span></a></p>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- Article 3: Terraform -->
-                <div class="col-md-4">
-                    <div class="journal-wrap hover-lift">
-                        <div class="journal-text">
-                             <h3><a href="https://medium.com/@girishburade30792" target="_blank">💣 Terraform Mistakes & Fixes</a></h3>
-                             <p>State management disasters, module structure flubs, and how to verify your plans before applying.</p>
-                             <span class="devops-badge">IaC</span>
-                             <p><a href="https://medium.com/@girishburade30792" target="_blank" class="btn btn-sm btn-primary mt-2">Read <span class="icon-arrow-right"></span></a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="https://medium.com/@girishburade30792" target="_blank" class="btn btn-primary py-3 px-5">View All Articles on Medium</a>
-            </div>
-
-       </div>
-    </div>
- </div>
   <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
             <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -618,20 +567,33 @@
                      <p><a href="#">resumelink</a></p>
                   </div>
                </div>
-               <div class="container">
-                  <br>
-                  <br>
-                  <div class="row justify-content-center">
-                     <div class="col-md-7 ftco-animate text-center">
-                     </div>
-                     <br>
-                     <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-                     <li class="ftco-animate normal-txt"></li>
-                     <br>
-                  </div>
+      </section>
+      
+      <!-- Slogan Section -->
+      <section class="ftco-section ftco-no-pt ftco-no-pb mb-5">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-md-10 text-center">
+                  <h3 class="blink-slogan" style="margin: 0; font-size: 20px;">
+                     💡🏴‍☠️ Technology thrives when it's shared — not sold. Keep it Open, Keep it Free.
+                  </h3>
                </div>
-         </section>
-         <footer class="ftco-footer ftco-section">
+            </div>
+         </div>
+         <style>
+             .blink-slogan {
+               color: #66ff33;
+               font-weight: bold;
+               animation: blink 3s infinite;
+             }
+             @keyframes blink {
+               0%, 100% { opacity: 1; }
+               50% { opacity: 0.5; }
+             }
+         </style>
+      </section>
+
+      <footer class="ftco-footer" style="padding: 2em 0;">
          <div class="container">
          <div class="row">
          <div class="col-md-12 text-center">
@@ -648,27 +610,7 @@
          </svg>
       </section>
       </div> <!-- End of .row -->
-      <!-- 🔥 Slogan Section Below Contact Details -->
-      <div class="row justify-content-center mt-3 mb-2">
-       <div class="col-md-10 text-center">
-       <h3 class="blink-slogan" style="margin: 0;">
-      💡🏴‍☠️Technology thrives when it's shared — not sold. Keep it Open, Keep it Free.
-    </h3>
-  </div>
-</div>
-<style>
-.blink-slogan {
-  color: #66ff33;
-  font-weight: bold;
-  font-size: 20px;
-  animation: blink 5s infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-</style>
-      </div>
+
       <script>
     function downloadPDF() {
       const link = document.createElement("a");
