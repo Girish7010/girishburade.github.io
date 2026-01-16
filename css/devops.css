@@ -1,0 +1,351 @@
+/* DevOps Portfolio Enhancements */
+
+/* 1. Global Utilities */
+.devops-text-highlight {
+  color: #ffbd39; /* Matches existing accent */
+  font-weight: 700;
+}
+
+.devops-badge {
+  background: rgba(255, 189, 57, 0.1);
+  color: #ffbd39;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(255, 189, 57, 0.2);
+}
+
+/* 2. Recruiter Snapshot Card */
+.recruiter-snapshot {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  color: #fff;
+  max-width: 400px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.recruiter-snapshot:hover {
+  transform: translateY(-5px);
+  border-color: #ffbd39;
+}
+
+.snapshot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.snapshot-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffbd39;
+}
+
+.snapshot-badge {
+  background: #28a745;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.snapshot-row {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.snapshot-label {
+  min-width: 100px;
+  font-weight: 600;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.snapshot-value {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* 3. Live DevOps Demo Widget */
+.live-demo-widget {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: "Courier New", monospace;
+  color: #0f0;
+  font-size: 0.9rem;
+  width: 300px; /* Fixed width or responsive */
+  position: fixed; /* Or placed intentionally */
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+  display: none; /* Hidden by default until we decide placement, or stick to hero */
+}
+/* Re-doing live demo for Hero Placement instead of fixed */
+.hero-live-demo {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #333;
+  border-left: 4px solid #ffbd39;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: "Consolas", "Monaco", monospace;
+  color: #d4d4d4;
+  max-width: 100%;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.status-label {
+  color: #aaa;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.dot.green {
+  background-color: #28a745;
+  box-shadow: 0 0 5px #28a745;
+}
+.dot.yellow {
+  background-color: #ffc107;
+}
+.dot.red {
+  background-color: #dc3545;
+}
+.dot.blue {
+  background-color: #007bff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 4. Impact Metrics Bar */
+.impact-metrics-section {
+  padding: 4rem 0;
+  background: #000;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #111;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.metric-card:hover {
+  border-color: #ffbd39;
+  transform: translateY(-5px);
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffbd39;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.metric-label {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.metric-sub {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+/* 5. Skill Usage Badges */
+.skill-context {
+  font-size: 0.85rem;
+  color: #ccc;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-left: 10px;
+  /* float: right; */
+  position: relative;
+  top: -2px;
+}
+
+/* 6. Architecture Diagrams Placeholder */
+.arch-diagram-placeholder {
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.arch-diagram-placeholder:hover {
+  border-color: #ffbd39;
+  color: #ffbd39;
+  background: rgba(255, 189, 57, 0.05);
+}
+
+/* 7. How I Work */
+.how-i-work-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  height: 100%;
+  border-left: 4px solid #ffbd39;
+}
+
+.how-i-work-icon {
+  font-size: 2rem;
+  color: #ffbd39;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.how-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* 8. Security Section */
+.security-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.security-icon {
+  margin-right: 10px;
+  color: #28a745;
+}
+
+/* 9. Video Intro Placeholder */
+.video-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 189, 57, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid #000;
+  margin-left: 4px;
+}
+
+/* Button Pop-up Effect */
+.btn-pop {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-pop:hover {
+  transform: translateY(-5px) scale(1.05); /* Pop up and scale */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  z-index: 2;
+}
+
+/* Global Card Hover Effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important; 
+}
+
+/* Project Card Description Truncation */
+.project-desc {
+  display: block; /* changed from -webkit-box to block for smoother transition */
+  overflow: hidden;
+  max-height: 85px; /* approx 3 lines */
+  transition: max-height 0.4s ease-out; /* Smooth transition */
+}
+
+/* Expand Project Description on Hover */
+.blog-entry:hover .project-desc {
+  max-height: 500px; /* large enough to fit all content */
+}
