@@ -349,3 +349,27 @@
 .blog-entry:hover .project-desc {
   max-height: 500px; /* large enough to fit all content */
 }
+
+/* Resume Download Button */
+.btn-pill-yellow {
+  background: #ffbd39 !important;
+  color: #000 !important;
+  border-radius: 50px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-pill-yellow:hover {
+  background: #e0a800 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 189, 57, 0.4);
+  color: #000 !important;
+}
