@@ -2,127 +2,162 @@
 <html lang="en">
 <head>
    <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>Girish Burade | DevOps &amp; Cloud Engineer (AWS, Terraform, FinOps)</title>
-   <meta name="description" content="Girish Burade – Sr. DevOps & Cloud Engineer in Nagpur, India. AWS Certified Solutions Architect working with Terraform, CI/CD, Docker, security and FinOps.">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Girish Burade | DevOps &amp; Cloud Engineer (AWS, Terraform, CI/CD)</title>
+   <meta name="description" content="Girish Burade – Senior DevOps & Cloud Engineer. AWS Certified Solutions Architect building production AWS infrastructure, CI/CD pipelines, Terraform, Docker, monitoring and cloud cost optimization.">
    <meta name="author" content="Girish Burade">
-   <meta name="theme-color" content="#000000">
+   <meta name="theme-color" content="#07090e">
    <link rel="canonical" href="https://girish7010.github.io/girishburade.github.io/">
    <meta property="og:type" content="website">
    <meta property="og:title" content="Girish Burade | DevOps & Cloud Engineer">
-   <meta property="og:description" content="AWS Certified DevOps & Cloud Engineer – Terraform, CI/CD, security and FinOps.">
+   <meta property="og:description" content="AWS Certified DevOps & Cloud Engineer – production infrastructure, CI/CD, Terraform, Docker and monitoring.">
    <meta property="og:url" content="https://girish7010.github.io/girishburade.github.io/">
    <meta property="og:image" content="https://girish7010.github.io/girishburade.github.io/images/girish-profile.jpg">
    <meta name="twitter:card" content="summary">
-   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffbd39'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='30' fill='%23000'%3EGB%3C/text%3E%3C/svg%3E">
+   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307090e'/%3E%3Crect x='3' y='3' width='58' height='58' rx='12' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='26' fill='%2322d3ee'%3EGB%3C/text%3E%3C/svg%3E">
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-   <link rel="stylesheet" href="css/animate.css">
-   <link rel="stylesheet" href="css/icomoon.css">
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/devops.css">
-   <link rel="stylesheet" href="css/polish.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+   <script>document.documentElement.classList.add('js')</script>
+   <link rel="stylesheet" href="css/portfolio.css">
+   <script src="js/portfolio.js" defer></script>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="120">
+<body>
+   <!-- Icon sprite (inline SVG keeps icons crisp with zero extra requests) -->
+   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+         <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.9-9.9A6 6 0 0 1 17.7 9 4.5 4.5 0 0 1 17.5 18Z"/></symbol>
+         <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+         <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 7v10M18 11c0 4-6 3-11 7"/></symbol>
+         <symbol id="i-pipeline" viewBox="0 0 24 24"><rect x="2" y="9" width="6" height="6" rx="1.5"/><rect x="16" y="9" width="6" height="6" rx="1.5"/><path d="M8 12h8M12 9V5h7v4M12 15v4h-7v-4"/></symbol>
+         <symbol id="i-build" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4Z"/></symbol>
+         <symbol id="i-test" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3"/><path d="M7 15h10"/></symbol>
+         <symbol id="i-container" viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10"/></symbol>
+         <symbol id="i-registry" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v7M14 17.5h7"/></symbol>
+         <symbol id="i-deploy" viewBox="0 0 24 24"><path d="M5 15c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1Z"/><path d="m12 15-3-3a22 22 0 0 1 2-4A13 13 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2Z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></symbol>
+         <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6"/></symbol>
+         <symbol id="i-heart" viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></symbol>
+         <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M6 13l3-3 3 2 5-5"/></symbol>
+         <symbol id="i-balancer" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5 5 16.5M12 11.5l7 5"/></symbol>
+         <symbol id="i-app" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+         <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+         <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.8-9.8M17 6l3 3M14.5 8.5l2 2"/></symbol>
+         <symbol id="i-cost" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 9 4 4 3-3 5 5"/><path d="M15 15h4v-4"/></symbol>
+         <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+         <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h6"/></symbol>
+         <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-3h14v3"/></symbol>
+         <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+         <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+         <symbol id="i-incident" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+         <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+         <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+         <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4 10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+         <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+         <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></symbol>
+         <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+         <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-7M11 13a3 3 0 0 1 6 0v4"/></symbol>
+         <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></symbol>
+         <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+         <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 22l5-3 5 3-1.5-8.1"/></symbol>
+         <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+         <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+         <symbol id="i-diagram" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="5" rx="1"/><rect x="15" y="3" width="6" height="5" rx="1"/><rect x="9" y="16" width="6" height="5" rx="1"/><path d="M6 8v3h12V8M12 11v5"/></symbol>
+      </defs>
+   </svg>
+
+   <a class="skip" href="#main">Skip to content</a>
 
    <!-- ============ NAVBAR ============ -->
-   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="container">
-         <a class="navbar-brand" href="#home-section">Girish Burade</a>
-         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
+   <header class="nav" id="top">
+      <div class="container nav-inner">
+         <a class="brand" href="#home">
+            <span class="brand-mark">GB</span>
+            <span class="brand-text">girish<span>.burade</span></span>
+         </a>
+         <button class="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">
+            <svg class="ic"><use href="#i-menu"/></svg>
          </button>
-         <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav nav ml-auto align-items-lg-center">
-               <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-               <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-               <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
-               <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-               <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-               <li class="nav-item ml-lg-3 js-resume-item">
-                  <a href="docs/Girish_Devops_update_CV.pdf" download class="btn-resume js-resume-link">
-                     <span class="icon-download" aria-hidden="true"></span> Resume
-                  </a>
-               </li>
-            </ul>
-         </div>
+         <nav id="nav-menu" class="nav-menu" aria-label="Primary">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#infrastructure">Infrastructure</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a class="btn btn-primary btn-sm js-resume-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download>
+               <svg class="ic"><use href="#i-download"/></svg> Download Resume
+            </a>
+         </nav>
       </div>
-   </nav>
+   </header>
 
-   <main>
+   <main id="main">
    <!-- ============ HERO ============ -->
-   <section id="home-section" class="gb-hero">
-      <div class="container">
-         <div class="row align-items-center">
-            <div class="col-lg-7 order-2 order-lg-1">
-               <p class="gb-eyebrow"><span class="gb-dot"></span> Open to new roles</p>
-               <h1 class="gb-title">Hi, I'm <span>Girish Burade</span></h1>
-               <p class="gb-role"><span id="typing-animation">DevOps Engineer</span><span class="gb-caret" aria-hidden="true"></span></p>
-               <p class="gb-lead">
-                  DevOps, Cloud &amp; FinOps engineer with <strong class="js-exp-years">5+ years</strong> of experience
-                  building reliable, secure and cost-efficient infrastructure on AWS. Motorcycle enthusiast and
-                  problem-solver at heart.
-               </p>
-               <div class="gb-actions">
-                  <a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener" class="gb-btn gb-btn-primary">
-                     <span class="icon-linkedin" aria-hidden="true"></span> LinkedIn
-                  </a>
-                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener" class="gb-btn gb-btn-outline">
-                     <span class="icon-github" aria-hidden="true"></span> GitHub
-                  </a>
-                  <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener" class="gb-btn gb-btn-outline">
-                     <span class="icon-medium" aria-hidden="true"></span> Blog
-                  </a>
-               </div>
-            </div>
-            <div class="col-lg-5 order-1 order-lg-2 text-center mb-4 mb-lg-0">
-               <a href="https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile" target="_blank" rel="noopener" class="gb-cert" title="Verify certification on Credly">
-                  <img src="images/aws-ar.jpg" alt="AWS Certified Solutions Architect – Associate badge" width="260" height="260">
-                  <span class="gb-cert-label">AWS Certified Solutions Architect – Associate <span class="icon-external-link" aria-hidden="true"></span></span>
-               </a>
+   <section class="hero" id="home">
+      <div class="container hero-grid">
+         <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> DevOps &amp; Cloud Engineer · Open to new roles</p>
+            <h1>Building <span class="grad">scalable cloud infrastructure</span>, automated CI/CD pipelines and reliable production systems.</h1>
+            <p class="lead">
+               I'm <strong>Girish Burade</strong> — a Senior DevOps / Cloud Engineer with
+               <strong class="js-exp-years">5+ years</strong> designing, automating and operating production AWS infrastructure.
+            </p>
+            <ul class="tech-badges" aria-label="Core technologies">
+               <li><svg class="ic"><use href="#i-cloud"/></svg>AWS</li>
+               <li><svg class="ic"><use href="#i-layers"/></svg>Terraform</li>
+               <li><svg class="ic"><use href="#i-container"/></svg>Docker</li>
+               <li><svg class="ic"><use href="#i-pipeline"/></svg>CI/CD</li>
+               <li><svg class="ic"><use href="#i-terminal"/></svg>Linux</li>
+               <li><svg class="ic"><use href="#i-monitor"/></svg>CloudWatch</li>
+            </ul>
+            <div class="actions">
+               <a class="btn btn-primary" href="#infrastructure"><svg class="ic"><use href="#i-diagram"/></svg> View Infrastructure</a>
+               <a class="btn btn-outline" href="#projects"><svg class="ic"><use href="#i-code"/></svg> View Projects</a>
+               <a class="btn btn-ghost js-resume-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg> Download Resume</a>
             </div>
          </div>
-      </div>
-   </section>
 
-   <!-- ============ IMPACT METRICS ============ -->
-   <section class="gb-section impact-metrics-section">
-      <div class="container">
-         <div class="gb-heading text-center">
-            <h2>Delivering Business Impact Through DevOps</h2>
-            <p>Where engineering decisions meet business value.</p>
+         <!-- Terminal component (animated; accepts a few commands afterwards) -->
+         <div class="terminal reveal" aria-label="Interactive terminal">
+            <div class="terminal-bar">
+               <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+               <span class="terminal-title">girish@prod: ~</span>
+            </div>
+            <div class="terminal-body" id="terminal" aria-live="polite">
+               <noscript>
+                  <div class="t-line"><span class="t-prompt">$</span> whoami</div>
+                  <div class="t-out">girish-burade · devops &amp; cloud engineer</div>
+               </noscript>
+            </div>
+            <form class="terminal-input" id="terminal-form" hidden autocomplete="off">
+               <label for="terminal-cmd" class="t-prompt">$</label>
+               <input id="terminal-cmd" type="text" spellcheck="false" placeholder="type 'help'" aria-label="Terminal command">
+            </form>
          </div>
-         <div class="row">
-            <div class="col-6 col-lg-3 mb-4">
-               <div class="metric-card">
-                  <span class="metric-number">32%</span>
-                  <span class="metric-label">AWS Cost Reduction</span>
-                  <p class="metric-sub">via FinOps practices</p>
+         <!-- Engineering snapshot (facts only — no invented metrics) -->
+         <div class="snapshot" aria-label="Engineering snapshot">
+            <div class="snapshot-grid">
+               <div class="snap reveal">
+                  <span class="snap-label">Experience</span>
+                  <span class="snap-value js-exp-years">5+ years</span>
+                  <span class="snap-sub">Production AWS since 2020</span>
                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-4">
-               <div class="metric-card">
-                  <span class="metric-number">5 min</span>
-                  <span class="metric-label">Deployment Time</span>
-                  <p class="metric-sub">Reduced from 20 mins</p>
+               <a class="snap reveal" href="https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile" target="_blank" rel="noopener">
+                  <span class="snap-label">Cloud platform</span>
+                  <span class="snap-value">AWS</span>
+                  <span class="snap-sub">Solutions Architect – Associate <svg class="ic ic-xs"><use href="#i-external"/></svg></span>
+               </a>
+               <div class="snap reveal">
+                  <span class="snap-label">Delivery</span>
+                  <span class="snap-value">CI/CD</span>
+                  <span class="snap-sub">CodeBuild · CodeDeploy · GitLab CI</span>
                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-4">
-               <div class="metric-card">
-                  <span class="metric-number">99.95%</span>
-                  <span class="metric-label">Uptime Achieved</span>
-                  <p class="metric-sub">High-availability architecture</p>
-               </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-4">
-               <div class="metric-card">
-                  <span class="metric-number">100+</span>
-                  <span class="metric-label">Security Flaws Fixed</span>
-                  <p class="metric-sub">Automated scans</p>
+               <div class="snap reveal">
+                  <span class="snap-label">Provisioning</span>
+                  <span class="snap-value">IaC</span>
+                  <span class="snap-sub">Terraform · Dev / Staging / Prod</span>
                </div>
             </div>
          </div>
@@ -130,46 +165,298 @@
    </section>
 
    <!-- ============ ABOUT ============ -->
-   <section class="gb-section" id="about-section">
+   <section class="section" id="about">
       <div class="container">
-         <div class="gb-heading text-center">
-            <span class="gb-kicker">About</span>
-            <h2>About Me</h2>
-         </div>
-         <div class="row">
-            <div class="col-lg-5 mb-5 mb-lg-0">
-               <div class="gb-card gb-profile">
-                  <img src="images/girish-profile.jpg" alt="Girish Burade" class="gb-avatar" width="180" height="180" loading="lazy">
-                  <ul class="gb-facts">
-                     <li><span>Name</span><span>Girish Burade</span></li>
-                     <li><span>Role</span><span>Sr. DevOps &amp; Cloud Engineer</span></li>
-                     <li><span>Experience</span><span class="js-exp-exact">5+ years</span></li>
-                     <li><span>Location</span><span>Nagpur, India</span></li>
-                  </ul>
+         <header class="section-head">
+            <span class="kicker">01 · about</span>
+            <h2>Engineer for production, not just for demos.</h2>
+         </header>
+         <div class="about-grid">
+            <aside class="profile-card reveal">
+               <img src="images/girish-profile.jpg" alt="Girish Burade" width="400" height="400" loading="lazy" decoding="async">
+               <dl class="facts">
+                  <div><dt>role</dt><dd>Senior DevOps / Cloud Engineer</dd></div>
+                  <div><dt>experience</dt><dd class="js-exp-exact">5+ years</dd></div>
+                  <div><dt>cloud</dt><dd>AWS Certified Solutions Architect – Associate</dd></div>
+                  <div><dt>also</dt><dd>AWS Cloud Practitioner · CCNA</dd></div>
+               </dl>
+            </aside>
+            <div class="about-body reveal">
+               <p class="about-lead">
+                  I design, automate and operate <strong>production AWS infrastructure</strong>. My day-to-day spans
+                  CI/CD pipeline engineering, Infrastructure as Code with Terraform, Docker and Amazon ECS/ECR,
+                  and monitoring with CloudWatch — plus Linux, networking, security and cost optimization work that
+                  keeps production healthy.
+               </p>
+               <ul class="focus-list">
+                  <li><svg class="ic"><use href="#i-pipeline"/></svg><div><b>Automation mindset</b><span>If I have to do it twice, I automate it — Terraform, shell and Python.</span></div></li>
+                  <li><svg class="ic"><use href="#i-server"/></svg><div><b>Production deployments</b><span>Release workflows with CodeBuild, CodeDeploy, ECR and CI/CD tooling.</span></div></li>
+                  <li><svg class="ic"><use href="#i-monitor"/></svg><div><b>Reliability &amp; monitoring</b><span>CloudWatch alarms, SNS and uptime monitoring to catch issues before users do.</span></div></li>
+                  <li><svg class="ic"><use href="#i-shield"/></svg><div><b>Security &amp; cost</b><span>IAM least privilege, Secrets Manager, KMS, AWS Config and FinOps practices.</span></div></li>
+               </ul>
+               <div class="principles">
+                  <div><span class="mono accent">collaborative</span><p>Work closely with developers. Blameless postmortems and shared ownership — "you build it, you run it."</p></div>
+                  <div><span class="mono accent">automate-first</span><p>Repeatable, reviewable infrastructure over manual steps.</p></div>
+                  <div><span class="mono accent">secure-by-default</span><p>Least privilege, managed secrets, backup and disaster recovery strategy.</p></div>
                </div>
             </div>
-            <div class="col-lg-7 pl-lg-5">
-               <p class="gb-text">
-                  I build and manage CI/CD pipelines, automate infrastructure, improve system reliability and
-                  reduce cloud costs. I work daily with AWS, Terraform and Docker to make delivery faster and
-                  operations more efficient, and I enjoy working closely with development teams in Agile
-                  environments to create scalable solutions that meet real business needs.
-               </p>
+         </div>
+      </div>
+   </section>
 
-               <h3 class="gb-subtitle">Skills &amp; Real-World Usage</h3>
-               <ul class="gb-skills">
-                  <li><span class="devops-badge">AWS Cloud</span><span>Designed multi-AZ infrastructure for fintech workloads</span></li>
-                  <li><span class="devops-badge">Terraform</span><span>Used in 15+ production deployments (modules &amp; state management)</span></li>
-                  <li><span class="devops-badge">CI/CD</span><span>Automated build-test-deploy pipelines (GitHub Actions / Jenkins)</span></li>
-                  <li><span class="devops-badge">Security</span><span>Implemented IAM least privilege &amp; AWS Secrets Manager</span></li>
-                  <li><span class="devops-badge">FinOps</span><span>Reduced monthly cloud spend by 32% via rightsizing</span></li>
+   <!-- ============ INFRASTRUCTURE ============ -->
+   <section class="section section-alt" id="infrastructure">
+      <div class="container">
+         <header class="section-head">
+            <span class="kicker">02 · infrastructure</span>
+            <h2>How I ship to production.</h2>
+            <p>The reference pattern I build and run on AWS — from commit to monitored workload. Hover or tap a node to inspect it.</p>
+         </header>
+
+         <!-- CI/CD pipeline visualization -->
+         <div class="pipeline-block" id="pipeline">
+            <div class="pipeline-head">
+               <div>
+                  <span class="kicker">ci/cd pipeline</span>
+                  <h3>From commit to monitored release.</h3>
+               </div>
+               <span class="pill mono">AWS deployment flow · reference architecture</span>
+            </div>
+            <ol class="pipeline" aria-label="CI/CD pipeline stages — hover, focus or tap a stage to inspect it">
+               <li class="stage" tabindex="0" data-tech="Git"><svg class="ic"><use href="#i-code"/></svg><span class="stage-name">Code</span><span class="stage-desc"><b>Git</b> Changes are committed and pushed to version control.</span></li>
+               <li class="stage" tabindex="0" data-tech="GitHub · GitLab"><svg class="ic"><use href="#i-git"/></svg><span class="stage-name">Repo</span><span class="stage-desc"><b>GitHub · GitLab</b> A push to the main branch triggers the pipeline automatically.</span></li>
+               <li class="stage" tabindex="0" data-tech="AWS CodeBuild · GitLab CI/CD · GitHub Actions"><svg class="ic"><use href="#i-build"/></svg><span class="stage-name">Build</span><span class="stage-desc"><b>AWS CodeBuild · GitLab CI/CD · GitHub Actions</b> Builds and validates the application before deployment.</span></li>
+               <li class="stage" tabindex="0" data-tech="Pipeline test stage"><svg class="ic"><use href="#i-test"/></svg><span class="stage-name">Test</span><span class="stage-desc"><b>Pipeline test stage</b> Standardized test stage plus automated security and vulnerability checks.</span></li>
+               <li class="stage" tabindex="0" data-tech="Docker"><svg class="ic"><use href="#i-container"/></svg><span class="stage-name">Image</span><span class="stage-desc"><b>Docker</b> The application is packaged into a versioned container image.</span></li>
+               <li class="stage" tabindex="0" data-tech="Amazon ECR"><svg class="ic"><use href="#i-registry"/></svg><span class="stage-name">ECR</span><span class="stage-desc"><b>Amazon ECR</b> Images are pushed to a private registry, ready to roll out.</span></li>
+               <li class="stage" tabindex="0" data-tech="AWS CodeDeploy · Amazon ECS"><svg class="ic"><use href="#i-deploy"/></svg><span class="stage-name">Deploy</span><span class="stage-desc"><b>AWS CodeDeploy · Amazon ECS</b> Automated rollout with rollback handling — no manual steps.</span></li>
+               <li class="stage" tabindex="0" data-tech="Amazon EC2 · Auto Scaling · Docker Compose"><svg class="ic"><use href="#i-server"/></svg><span class="stage-name">EC2 / ASG</span><span class="stage-desc"><b>Amazon EC2 · Auto Scaling · Docker Compose</b> Services run isolated; secrets are injected from AWS Secrets Manager at startup.</span></li>
+               <li class="stage" tabindex="0" data-tech="Health checks"><svg class="ic"><use href="#i-heart"/></svg><span class="stage-name">Health</span><span class="stage-desc"><b>Health checks</b> Health checks confirm the new release is serving correctly.</span></li>
+               <li class="stage" tabindex="0" data-tech="CloudWatch · SNS · Uptime Kuma"><svg class="ic"><use href="#i-monitor"/></svg><span class="stage-name">Monitor</span><span class="stage-desc"><b>CloudWatch · SNS · Uptime Kuma</b> Metrics, logs and alarms notify the team before users notice.</span></li>
+            </ol>
+            <div class="stage-panel" aria-live="polite">
+               <span class="mono dim">stage</span>
+               <b id="stage-title">Code</b>
+               <span class="mono accent" id="stage-tech">Git</span>
+               <p id="stage-text">Changes are committed and pushed to version control.</p>
+            </div>
+         </div>
+         <!-- Reference architecture -->
+         <div class="infra-sub">
+            <span class="kicker">reference architecture</span>
+            <h3>From load balancer to monitored workload.</h3>
+         </div>
+         <div class="infra-wrap">
+            <div class="diagram" id="infra-diagram" data-flow="reference" aria-label="Reference production architecture"></div>
+            <aside class="inspector reveal" aria-live="polite">
+               <span class="mono dim">node inspector</span>
+               <div class="inspector-head">
+                  <svg class="ic ic-lg" id="inspector-icon"><use href="#i-git"/></svg>
+                  <div>
+                     <h3 id="inspector-title">Source control</h3>
+                     <span class="mono accent" id="inspector-tech">GitHub · GitLab</span>
+                  </div>
+               </div>
+               <p id="inspector-desc">Every change starts as a reviewed commit. Pushing to the main branch triggers the pipeline.</p>
+               <ul class="legend">
+                  <li><i class="lg lg-flow"></i> request / deploy flow</li>
+                  <li><i class="lg lg-node"></i> managed AWS component</li>
+                  <li><i class="lg lg-az"></i> multi-AZ compute</li>
                </ul>
+            </aside>
+         </div>
 
-               <h3 class="gb-subtitle">Tech Toolbox</h3>
-               <div class="gb-tags">
-                  <span>AWS</span><span>Terraform</span><span>Docker</span><span>Linux</span>
-                  <span>GitHub Actions</span><span>Jenkins</span><span>Ansible</span><span>Python</span><span>Git</span>
-                  <span>RDS / MySQL / PostgreSQL</span><span>CloudWatch</span><span>Uptime Kuma</span><span>Apache / Nginx</span><span>FinOps</span>
+      </div>
+   </section>
+
+   <!-- ============ SKILLS ============ -->
+   <section class="section" id="skills">
+      <div class="container">
+         <header class="section-head">
+            <span class="kicker">03 · skills</span>
+            <h2>DevOps skill matrix.</h2>
+            <p>Grouped around the technologies and practices used to build, deploy and operate production systems.</p>
+         </header>
+         <div class="matrix">
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-cloud"/></svg><h3>Cloud · AWS</h3></header>
+               <ul class="chips"><li>EC2</li><li>VPC</li><li>S3</li><li>IAM</li><li>ALB / ELB</li><li>Auto Scaling</li><li>Launch Templates</li><li>ECS</li><li>ECR</li><li>Lambda</li><li>Secrets Manager</li><li>AWS Config</li><li>SNS</li><li>AWS CLI</li></ul>
+               <footer>used at · Quralyst AI · Thinkbiz · Genericure</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-layers"/></svg><h3>Infrastructure as Code</h3></header>
+               <ul class="chips"><li class="hot">Terraform</li><li>Multi-environment</li><li>Dev · Staging · Prod</li></ul>
+               <footer>used at · Thinkbiz</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-container"/></svg><h3>Containers</h3></header>
+               <ul class="chips"><li class="hot">Docker</li><li>Docker Compose</li><li>Amazon ECS</li><li>Amazon ECR</li><li>Container logging</li></ul>
+               <footer>used at · Quralyst AI · Thinkbiz</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-pipeline"/></svg><h3>CI/CD</h3></header>
+               <ul class="chips"><li>AWS CodePipeline</li><li class="hot">AWS CodeBuild</li><li class="hot">AWS CodeDeploy</li><li>GitHub Actions</li><li class="hot">GitLab CI/CD</li><li>Git</li><li>Rollback handling</li></ul>
+               <footer>used at · Quralyst AI · Thinkbiz</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-monitor"/></svg><h3>Monitoring &amp; Reliability</h3></header>
+               <ul class="chips"><li class="hot">CloudWatch</li><li>Logs &amp; dashboards</li><li>Alarms</li><li>SNS alerting</li><li>Health checks</li><li>Uptime Kuma</li><li>MS Teams alerts</li><li>Disaster recovery</li></ul>
+               <footer>used at · Quralyst AI · Thinkbiz · Genericure</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-shield"/></svg><h3>Security &amp; Compliance</h3></header>
+               <ul class="chips"><li>IAM least privilege</li><li>Secrets Manager</li><li>KMS encryption</li><li>AWS Config</li><li>Vulnerability checks</li><li>Audit trails</li></ul>
+               <footer>used at · Quralyst AI · Thinkbiz</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-network"/></svg><h3>Networking</h3></header>
+               <ul class="chips"><li>Subnets &amp; route tables</li><li>Security groups</li><li>Load balancing</li><li>Nginx reverse proxy</li><li>SSL/TLS</li><li>DNS &amp; domains</li><li>SMTP</li></ul>
+               <footer>used at · Quralyst AI</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-terminal"/></svg><h3>OS &amp; Scripting</h3></header>
+               <ul class="chips"><li class="hot">Linux / Unix</li><li>Bash</li><li>Shell scripting</li><li>Python</li></ul>
+               <footer>used at · Thinkbiz · Genericure</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-cost"/></svg><h3>FinOps</h3></header>
+               <ul class="chips"><li>AWS Budgets</li><li>Cost Explorer</li><li>Cost anomaly detection</li><li>Right-sizing</li></ul>
+               <footer>used at · Thinkbiz · Genericure</footer>
+            </article>
+            <article class="mx reveal">
+               <header><svg class="ic"><use href="#i-db"/></svg><h3>Databases</h3></header>
+               <ul class="chips"><li>Amazon RDS</li><li>Aurora</li><li>Migrations</li><li>Version upgrades</li></ul>
+               <footer>used at · Thinkbiz</footer>
+            </article>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============ PROJECTS ============ -->
+   <section class="section section-alt" id="projects">
+      <div class="container">
+         <header class="section-head">
+            <span class="kicker">04 · projects</span>
+            <h2>Infrastructure projects.</h2>
+            <p>Real engineering work — source on <a href="https://github.com/Girish7010" target="_blank" rel="noopener">GitHub</a>, write-ups on <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener">Medium</a>.</p>
+         </header>
+
+         <div class="projects">
+            <!-- Quralyst AI (details from CV; source is private) -->
+            <article class="project reveal">
+               <header class="project-head">
+                  <div>
+                     <span class="mono accent">production · current role</span>
+                     <h3>Quralyst AI Platform</h3>
+                     <p class="project-sub">AI-driven deal-sourcing platform by Indago Research, running as isolated containers on AWS.</p>
+                  </div>
+                  <span class="pill">private codebase</span>
+               </header>
+               <dl class="spec">
+                  <div><dt>DevOps contribution</dt><dd>Built and operate the production infrastructure; automated frontend and backend releases end to end, removed hard-coded secrets and isolated browser-based scraping into its own worker.</dd></div>
+                  <div><dt>Infrastructure</dt><dd><ul class="tags"><li>EC2</li><li>Nginx · SSL/TLS</li><li>Docker Compose</li><li>Redis</li><li>Secrets Manager</li></ul></dd></div>
+                  <div><dt>CI/CD</dt><dd><ul class="tags"><li>CodeBuild</li><li>Amazon ECR</li><li>CodeDeploy</li></ul></dd></div>
+                  <div><dt>Technologies</dt><dd><ul class="tags"><li>Docker</li><li>Playwright worker</li><li>CloudWatch</li><li>SNS</li></ul></dd></div>
+               </dl>
+               <ul class="highlights">
+                  <li><svg class="ic"><use href="#i-check"/></svg>Automated deployments</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>Containerized frontend / backend</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>No hard-coded secrets</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>SSL/TLS termination</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>Isolated scraper worker</li>
+                  <li><svg class="ic"><use href="#i-check"/></svg>Production alerting</li>
+               </ul>
+               <footer class="project-actions">
+                  <button class="btn btn-outline btn-sm" type="button" data-arch="quralyst"><svg class="ic"><use href="#i-diagram"/></svg> Architecture</button>
+                  <a class="btn btn-ghost btn-sm" href="https://quralyst.ai/" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Live site</a>
+               </footer>
+            </article>
+
+            <!-- ECS project -->
+            <article class="project reveal">
+               <header class="project-head">
+                  <div>
+                     <span class="mono accent">aws · containers</span>
+                     <h3>Scalable Web Application on AWS ECS + EC2</h3>
+                     <p class="project-sub">Production-ready Flask app with blue-green deployments, auto-scaling and PostgreSQL on RDS.</p>
+                  </div>
+               </header>
+               <dl class="spec">
+                  <div><dt>DevOps contribution</dt><dd>Zero-downtime blue-green releases on ECS with Multi-AZ availability, provisioned as code and secured with IAM, private subnets and Secrets Manager.</dd></div>
+                  <div><dt>Infrastructure</dt><dd><ul class="tags"><li>ECS (EC2)</li><li>ALB</li><li>RDS PostgreSQL</li><li>Auto Scaling</li><li>Multi-AZ</li></ul></dd></div>
+                  <div><dt>CI/CD</dt><dd><ul class="tags"><li>Terraform</li><li>Docker</li><li>Blue-green deploy</li></ul></dd></div>
+                  <div><dt>Technologies</dt><dd><ul class="tags"><li>Flask</li><li>IAM</li><li>Secrets Manager</li><li>CloudWatch</li></ul></dd></div>
+               </dl>
+               <footer class="project-actions">
+                  <!-- NOTE: repo name says Kubernetes while the project is ECS — rename the repo or update this link -->
+                  <a class="btn btn-primary btn-sm" href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
+                  <button class="btn btn-outline btn-sm" type="button" data-arch="ecs"><svg class="ic"><use href="#i-diagram"/></svg> Architecture</button>
+               </footer>
+            </article>
+
+            <!-- Uptime Kuma -->
+            <article class="project reveal">
+               <header class="project-head">
+                  <div>
+                     <span class="mono accent">observability</span>
+                     <h3>Real-Time Monitoring &amp; Alerting</h3>
+                     <p class="project-sub">Uptime Kuma monitoring critical services across Dev, Staging and Production.</p>
+                  </div>
+               </header>
+               <dl class="spec">
+                  <div><dt>DevOps contribution</dt><dd>Real-time service health visibility with instant alerts for faster incident response.</dd></div>
+                  <div><dt>Infrastructure</dt><dd><ul class="tags"><li>Uptime Kuma</li><li>Dev · Staging · Prod</li></ul></dd></div>
+                  <div><dt>Alerting</dt><dd><ul class="tags"><li>Microsoft Teams</li><li>Mobile call notifications</li></ul></dd></div>
+                  <div><dt>Technologies</dt><dd><ul class="tags"><li>Monitoring</li><li>Alerting</li></ul></dd></div>
+               </dl>
+               <footer class="project-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
+                  <button class="btn btn-outline btn-sm" type="button" data-arch="kuma"><svg class="ic"><use href="#i-diagram"/></svg> Architecture</button>
+               </footer>
+            </article>
+
+            <!-- Compact projects -->
+            <div class="project-mini-grid">
+               <article class="project-mini reveal">
+                  <img src="images/1_KL-uMnZnNP-AYTuHzLDBGg.png" alt="DevOps security best practice diagram" width="640" height="360" loading="lazy" decoding="async">
+                  <div>
+                     <span class="mono accent">devsecops</span>
+                     <h3>Security Check Automation</h3>
+                     <p>Automatic security checks in the DevOps pipeline scan code and containers before deployment — catching issues early and making releases more secure.</p>
+                     <ul class="tags"><li>DevSecOps</li><li>CI/CD</li><li>Containers</li></ul>
+                     <!-- Source currently points to the GitHub profile (no dedicated repo link yet) -->
+                     <a class="btn btn-primary btn-sm mini-src" href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
+                  </div>
+               </article>
+               <article class="project-mini reveal">
+                  <img src="images/aws-best-practices.jpg" alt="AWS best practices diagram" width="640" height="360" loading="lazy" decoding="async">
+                  <div>
+                     <span class="mono accent">aws · governance</span>
+                     <h3>AWS Best Practices Across Projects</h3>
+                     <p>IAM roles and policies with least privilege, credentials managed through Secrets Manager, and resources provisioned with Terraform for repeatable deployments.</p>
+                     <ul class="tags"><li>IAM</li><li>Secrets Manager</li><li>Terraform</li></ul>
+                     <!-- Source currently points to the GitHub profile (no dedicated repo link yet) -->
+                     <a class="btn btn-primary btn-sm mini-src" href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
+                  </div>
+               </article>
+            </div>
+            <!-- Engineering activity -->
+            <div class="activity reveal">
+               <div class="activity-head">
+                  <svg class="ic ic-lg"><use href="#i-github"/></svg>
+                  <div>
+                     <h3>Engineering activity</h3>
+                     <span class="mono dim">github.com/Girish7010</span>
+                  </div>
+               </div>
+               <ul class="repo-list">
+                  <li><a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener"><svg class="ic"><use href="#i-registry"/></svg><span>Monitoring-Tool-Uptime-Kuma</span><em>monitoring</em></a></li>
+                  <li><a href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment" target="_blank" rel="noopener"><svg class="ic"><use href="#i-registry"/></svg><span>Running-Tracker-App-Kubernetes-Deployment</span><em>deployment</em></a></li>
+                  <li><a href="https://github.com/Girish7010/girishburade.github.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-registry"/></svg><span>girishburade.github.io</span><em>this site</em></a></li>
+               </ul>
+               <div class="activity-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/Girish7010?tab=repositories" target="_blank" rel="noopener">All repositories <svg class="ic ic-xs"><use href="#i-external"/></svg></a>
+                  <a class="btn btn-ghost btn-sm" href="https://medium.com/@girishburade30792" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pen"/></svg> Blog</a>
                </div>
             </div>
          </div>
@@ -177,311 +464,142 @@
    </section>
 
    <!-- ============ EXPERIENCE ============ -->
-   <section class="gb-section" id="resume-section">
+   <section class="section" id="experience">
       <div class="container">
-         <div class="gb-heading text-center">
-            <span class="gb-kicker">Career</span>
-            <h2>Experience</h2>
-         </div>
+         <header class="section-head">
+            <span class="kicker">05 · experience</span>
+            <h2>Engineering timeline.</h2>
+            <p>Content mirrors <a class="js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download>my CV</a>. Total: <b class="js-exp-exact">5+ years</b>.</p>
+         </header>
 
-         <div class="gb-timeline">
-            <!-- Quralyst AI (Indago Research) — content mirrors docs/Girish_Devops_update_CV.pdf -->
-            <article class="gb-job" data-start="2025-10" data-end="present">
-               <div class="gb-job-head">
-                  <div>
-                     <h3>Senior DevOps / Cloud Engineer</h3>
-                     <a href="https://quralyst.ai/" target="_blank" rel="noopener" class="gb-company">Quralyst AI <span class="icon-external-link" aria-hidden="true"></span></a>
-                     <span class="gb-company-parent">by <a href="https://indago-research.com/" target="_blank" rel="noopener">Indago Research</a></span>
-                     <span class="gb-badge-current">Current</span>
-                  </div>
-                  <span class="gb-date">Oct 2025 – Present</span>
+         <ol class="timeline">
+            <li class="job reveal" data-start="2025-10" data-end="present">
+               <div class="job-meta">
+                  <span class="job-date">Oct 2025 — Present</span>
+                  <span class="pill pill-live"><span class="status-dot"></span> current</span>
+                  <span class="mono dim">Bengaluru, India · Remote</span>
                </div>
-               <p class="gb-job-desc">AI-driven deal-sourcing platform · Bengaluru, India (Remote)</p>
-               <ul>
-                  <li>Built and operate production AWS infrastructure on EC2, running frontend, backend, scraper and Redis workloads as isolated Docker / Docker Compose services.</li>
-                  <li>Implemented end-to-end deployment automation with AWS CodeDeploy, CodeBuild and Amazon ECR, removing manual release steps.</li>
-                  <li>Configured Nginx reverse proxy with domain-based HTTP/HTTPS routing and SSL/TLS termination; injected secrets via AWS Secrets Manager.</li>
-                  <li>Engineered CloudWatch monitoring, alarms and SNS notifications to detect production issues before user impact.</li>
-               </ul>
-            </article>
+               <div class="job-card">
+                  <h3>Senior DevOps / Cloud Engineer</h3>
+                  <p class="job-co"><a href="https://quralyst.ai/" target="_blank" rel="noopener">Quralyst AI</a> <span class="dim">by</span> <a href="https://indago-research.com/" target="_blank" rel="noopener">Indago Research</a></p>
+                  <p class="job-scope"><b>Infrastructure:</b> production AWS on EC2 for an AI-driven deal-sourcing platform — containers, release automation, TLS, secrets and alerting.</p>
+                  <ul class="tags"><li>EC2</li><li>Docker</li><li>Compose</li><li>CodeBuild</li><li>CodeDeploy</li><li>ECR</li><li>Nginx</li><li>Secrets Manager</li><li>CloudWatch</li><li>SNS</li><li>JumpCloud</li></ul>
+                  <ul class="contrib">
+                     <li>Built and operate production AWS infrastructure on EC2, running frontend, backend, scraper and Redis workloads as isolated Docker and Docker Compose services.</li>
+                     <li>Implemented end-to-end deployment automation with AWS CodeDeploy, CodeBuild and Amazon ECR, removing manual deployment steps.</li>
+                     <li>Configured Nginx as a reverse proxy with domain-based HTTP/HTTPS routing and SSL/TLS termination.</li>
+                     <li>Integrated AWS Secrets Manager to inject credentials and configuration into containers at startup, eliminating hard-coded secrets.</li>
+                  </ul>
+                  <details>
+                     <summary>More contributions</summary>
+                     <ul class="contrib">
+                        <li>Engineered CloudWatch monitoring, alarms and SNS notifications — including EC2 network-traffic alerting — to detect issues before user impact.</li>
+                        <li>Improved stability by isolating browser-based workloads into a dedicated Playwright scraper worker; evaluated Auto Scaling (Launch Templates, ASG, ALB) for scalable tiers.</li>
+                        <li>Resolve production incidents end to end across Docker containers, deployments, Nginx, SMTP authentication, CloudWatch alarms and EC2 CPU, memory and disk.</li>
+                        <li>Led JumpCloud evaluation and implementation planning with Google Workspace integration and AWS access alignment (MFA, SSO, access control, managed devices).</li>
+                     </ul>
+                  </details>
+               </div>
+            </li>
 
-            <!-- Thinkbiz -->
-            <article class="gb-job" data-start="2022-02" data-end="2025-07">
-               <div class="gb-job-head">
-                  <div>
-                     <h3>DevOps Engineer</h3>
-                     <a href="https://thinkbiz.co.in/" target="_blank" rel="noopener" class="gb-company">Thinkbiz Technology Pvt Ltd <span class="icon-external-link" aria-hidden="true"></span></a>
-                  </div>
-                  <span class="gb-date">Feb 2022 – Jul 2025</span>
+            <li class="job reveal" data-start="2022-02" data-end="2025-07">
+               <div class="job-meta">
+                  <span class="job-date">Feb 2022 — Jul 2025</span>
+                  <span class="mono dim">Ahmedabad, India</span>
                </div>
-               <p class="gb-job-desc">Ahmedabad, India</p>
-               <ul>
-                  <li>Automated infrastructure provisioning with Terraform across Dev, Staging and Production environments.</li>
-                  <li>Built and maintained GitLab CI/CD pipelines with Docker for Amazon ECS deployments.</li>
-                  <li>Set up CloudWatch and Uptime Kuma monitoring integrated with Microsoft Teams, plus centralized logging and proactive alerting.</li>
-                  <li>Delivered cloud cost optimization with AWS Budgets, Cost Explorer and Cost Anomaly Detection; enforced compliance with AWS Config drift detection.</li>
-                  <li>Executed database migrations, version upgrades and full cloud account migrations with minimal downtime.</li>
-               </ul>
-            </article>
+               <div class="job-card">
+                  <h3>DevOps Engineer</h3>
+                  <p class="job-co"><a href="https://thinkbiz.co.in/" target="_blank" rel="noopener">Thinkbiz Technology Pvt Ltd</a></p>
+                  <p class="job-scope"><b>Infrastructure:</b> multi-environment AWS with Terraform, ECS delivery pipelines, monitoring, compliance and cost governance.</p>
+                  <ul class="tags"><li>Terraform</li><li>GitLab CI/CD</li><li>Docker</li><li>ECS</li><li>CloudWatch</li><li>Uptime Kuma</li><li>AWS Config</li><li>Budgets</li><li>Cost Explorer</li><li>RDS</li></ul>
+                  <ul class="contrib">
+                     <li>Automated infrastructure provisioning with Terraform for consistent, repeatable deployments across Dev, Staging and Production.</li>
+                     <li>Built and maintained CI/CD pipelines using GitLab CI/CD and Docker for Amazon ECS deployments, standardizing build, test and release stages.</li>
+                     <li>Designed monitoring and alerting with CloudWatch and Uptime Kuma integrated into Microsoft Teams for real-time service health visibility.</li>
+                     <li>Delivered cloud cost optimization using AWS Budgets, Cost Explorer and Cost Anomaly Detection, decommissioning unused resources.</li>
+                  </ul>
+                  <details>
+                     <summary>More contributions</summary>
+                     <ul class="contrib">
+                        <li>Configured centralized logging and proactive alerting to identify and resolve infrastructure issues early, reducing unplanned downtime.</li>
+                        <li>Enforced continuous security and compliance through AWS Config drift detection and automated vulnerability checks via shell scripting.</li>
+                        <li>Executed database migrations and version upgrades with minimal downtime, and managed full cloud account migrations from assessment to post-migration optimization.</li>
+                        <li>Architected scalable, secure AWS solutions to customer requirements with cross-functional teams.</li>
+                     </ul>
+                  </details>
+               </div>
+            </li>
 
-            <!-- Genericure -->
-            <article class="gb-job" data-start="2020-01" data-end="2020-11">
-               <div class="gb-job-head">
-                  <div>
-                     <h3>Cloud Engineer (AWS)</h3>
-                     <a href="https://www.genericure.in/" target="_blank" rel="noopener" class="gb-company">Genericure <span class="icon-external-link" aria-hidden="true"></span></a>
-                  </div>
-                  <span class="gb-date">Jan 2020 – Nov 2020</span>
+            <li class="job reveal" data-start="2020-01" data-end="2020-11">
+               <div class="job-meta">
+                  <span class="job-date">Jan 2020 — Nov 2020</span>
+                  <span class="mono dim">Nagpur, India</span>
                </div>
-               <p class="gb-job-desc">Nagpur, India</p>
-               <ul>
-                  <li>Designed and deployed AWS infrastructure for web applications, standing up new project environments from scratch.</li>
-                  <li>Automated provisioning and configuration using AWS CLI and shell scripting.</li>
-                  <li>Implemented backup and disaster recovery strategies for business-critical AWS resources.</li>
-                  <li>Applied cost optimization and AWS security best practices; owned monitoring and incident troubleshooting.</li>
-               </ul>
-            </article>
-         </div>
-      </div>
-   </section>
-
-   <!-- ============ HOW I WORK ============ -->
-   <section class="gb-section" id="philosophy-section">
-      <div class="container">
-         <div class="gb-heading text-center">
-            <span class="gb-kicker">Philosophy</span>
-            <h2>How I Work</h2>
-         </div>
-         <div class="row">
-            <div class="col-md-4 mb-4">
-               <div class="gb-card gb-work">
-                  <span class="gb-work-icon icon-users" aria-hidden="true"></span>
-                  <h3>Collaborative</h3>
-                  <p>Work closely with developers. Prefer blameless postmortems and shared ownership — "you build it, you run it."</p>
-               </div>
-            </div>
-            <div class="col-md-4 mb-4">
-               <div class="gb-card gb-work">
-                  <span class="gb-work-icon icon-cogs" aria-hidden="true"></span>
-                  <h3>Automate First</h3>
-                  <p>If I have to do it twice, I automate it. Terraform, Ansible and Python are my tools of choice.</p>
-               </div>
-            </div>
-            <div class="col-md-4 mb-4">
-               <div class="gb-card gb-work">
-                  <span class="gb-work-icon icon-shield" aria-hidden="true"></span>
-                  <h3>Security &amp; Reliability</h3>
-                  <ul class="gb-checks">
-                     <li><span class="icon-check" aria-hidden="true"></span> IAM least privilege</li>
-                     <li><span class="icon-check" aria-hidden="true"></span> Secrets rotation (AWS Secrets Manager)</li>
-                     <li><span class="icon-check" aria-hidden="true"></span> Backup &amp; DR strategy</li>
+               <div class="job-card">
+                  <h3>Cloud Engineer (AWS)</h3>
+                  <p class="job-co"><a href="https://www.genericure.in/" target="_blank" rel="noopener">Genericure</a></p>
+                  <p class="job-scope"><b>Infrastructure:</b> AWS environments for web applications, from first provisioning to backup, DR and monitoring.</p>
+                  <ul class="tags"><li>AWS</li><li>AWS CLI</li><li>Shell</li><li>Backup &amp; DR</li><li>Monitoring</li></ul>
+                  <ul class="contrib">
+                     <li>Designed and deployed AWS infrastructure for web applications, standing up new project environments from scratch.</li>
+                     <li>Automated provisioning and configuration using AWS CLI and shell scripting.</li>
+                     <li>Implemented backup and disaster recovery strategies for business-critical AWS resources.</li>
+                     <li>Performed cost optimization, applied AWS security best practices, and owned monitoring, incident troubleshooting and documentation.</li>
                   </ul>
                </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <!-- ============ PROJECTS ============ -->
-   <section class="gb-section" id="project-section">
-      <div class="container">
-         <div class="gb-heading text-center">
-            <span class="gb-kicker">Work</span>
-            <h2>Projects</h2>
-            <p>DevOps, security automation and AWS work. Full source code on <a href="https://github.com/Girish7010" target="_blank" rel="noopener">GitHub</a> and write-ups on <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener">Medium</a>.</p>
-         </div>
-
-         <!-- Featured project -->
-         <article class="gb-card gb-featured mb-5">
-            <span class="gb-kicker-sm">Featured project</span>
-            <h3>Scalable Web Application on AWS ECS + EC2</h3>
-            <p>Production-ready Flask app on <strong>AWS ECS (EC2 launch type)</strong> with blue-green deployments, auto-scaling and a PostgreSQL RDS database.</p>
-            <div class="gb-arch" aria-label="Architecture">
-               <span>ALB</span><i>→</i><span>ECS Cluster (EC2)</span><i>→</i><span>RDS PostgreSQL</span><i>→</i><span>Auto Scaling</span><i>→</i><span>CloudWatch</span>
-            </div>
-            <div class="row">
-               <div class="col-md-7">
-                  <ul class="gb-checks">
-                     <li><span class="icon-check" aria-hidden="true"></span> Blue-green deployments (zero downtime)</li>
-                     <li><span class="icon-check" aria-hidden="true"></span> Auto-scaling &amp; Multi-AZ high availability</li>
-                     <li><span class="icon-check" aria-hidden="true"></span> Secured with IAM, private VPC subnets &amp; Secrets Manager</li>
-                     <li><span class="icon-check" aria-hidden="true"></span> CloudWatch monitoring &amp; alerts</li>
-                     <li><span class="icon-check" aria-hidden="true"></span> IaC with Terraform + Docker-based deployment</li>
-                  </ul>
-               </div>
-               <div class="col-md-5 d-flex align-items-end justify-content-md-end mt-3 mt-md-0">
-                  <a href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment" target="_blank" rel="noopener" class="gb-btn gb-btn-primary">
-                     <span class="icon-github" aria-hidden="true"></span> View source
-                  </a>
-               </div>
-            </div>
-         </article>
-
-         <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-               <article class="gb-card gb-project">
-                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener" class="gb-project-img">
-                     <img src="images/1_KL-uMnZnNP-AYTuHzLDBGg.png" alt="DevOps security best practice diagram" loading="lazy">
-                  </a>
-                  <div class="gb-project-body">
-                     <h3><a href="https://github.com/Girish7010" target="_blank" rel="noopener">Security Check Automation for Cloud Accounts</a></h3>
-                     <p>Added automatic security checks to the DevOps pipeline to scan code and containers before deployment — catching issues early and making releases more secure and reliable.</p>
-                     <div class="gb-tags gb-tags-sm"><span>DevSecOps</span><span>CI/CD</span><span>Containers</span></div>
-                  </div>
-               </article>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-               <article class="gb-card gb-project">
-                  <a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener" class="gb-project-img">
-                     <img src="images/uptime-kuma.jpg" alt="Uptime Kuma monitoring dashboard" loading="lazy">
-                  </a>
-                  <div class="gb-project-body">
-                     <h3><a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener">Real-Time Monitoring &amp; Alerting with Uptime Kuma</a></h3>
-                     <p>Monitors critical services across Dev, Staging and Production. Integrated with Microsoft Teams for instant alerts, plus mobile call notifications for fast incident response.</p>
-                     <div class="gb-tags gb-tags-sm"><span>Monitoring</span><span>Alerting</span><span>MS Teams</span></div>
-                  </div>
-               </article>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-               <article class="gb-card gb-project">
-                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener" class="gb-project-img">
-                     <img src="images/aws-best-practices.jpg" alt="AWS best practices" loading="lazy">
-                  </a>
-                  <div class="gb-project-body">
-                     <h3><a href="https://github.com/Girish7010" target="_blank" rel="noopener">AWS Best Practices Across Projects</a></h3>
-                     <p>IAM roles and policies following least privilege, credentials and API keys stored and rotated in Secrets Manager, and all resources provisioned with Terraform for repeatable deployments.</p>
-                     <div class="gb-tags gb-tags-sm"><span>IAM</span><span>Secrets Manager</span><span>Terraform</span></div>
-                  </div>
-               </article>
-            </div>
-         </div>
+            </li>
+         </ol>
       </div>
    </section>
 
    <!-- ============ CONTACT ============ -->
-   <section class="gb-section" id="contact-section">
+   <section class="section section-alt" id="contact">
       <div class="container">
-         <div class="gb-card gb-contact">
-            <div class="text-center mb-4">
-               <span class="gb-kicker-sm">Open to roles</span>
-               <h2>Let's work together</h2>
-               <p class="gb-roles">DevOps Engineer · Cloud Engineer · FinOps Engineer</p>
-               <p class="gb-muted">Remote · Hybrid · On-site (India)</p>
+         <div class="contact-card reveal">
+            <div class="contact-copy">
+               <span class="kicker">06 · contact</span>
+               <h2>Let's build reliable infrastructure.</h2>
+               <p>Open to <b>DevOps Engineer</b>, <b>Cloud Engineer</b> and <b>FinOps Engineer</b> roles — remote, hybrid or on-site in India.</p>
+               <pre class="closing" aria-label="Closing message"><span class="t-prompt">&gt;</span> Ready to build reliable infrastructure.
+<span class="t-prompt">&gt;</span> Let's connect.<span class="cursor" aria-hidden="true"></span></pre>
             </div>
-            <div class="row justify-content-center">
-               <div class="col-sm-6 col-lg-3 mb-3">
-                  <div class="gb-contact-item">
-                     <span class="icon-map-marker" aria-hidden="true"></span>
-                     <h4>Location</h4>
-                     <p>Nagpur, India</p>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-3 mb-3">
-                  <a class="gb-contact-item" href="tel:+918668846084">
-                     <span class="icon-phone" aria-hidden="true"></span>
-                     <h4>Phone</h4>
-                     <p>+91 86688 46084</p>
-                  </a>
-               </div>
-               <div class="col-sm-6 col-lg-3 mb-3">
-                  <a class="gb-contact-item" href="mailto:girishburade@gmail.com">
-                     <span class="icon-envelope" aria-hidden="true"></span>
-                     <h4>Email</h4>
-                     <p>girishburade@gmail.com</p>
-                  </a>
-               </div>
-               <div class="col-sm-6 col-lg-3 mb-3 js-resume-item">
-                  <a class="gb-contact-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download>
-                     <span class="icon-file-pdf-o" aria-hidden="true"></span>
-                     <h4>Resume</h4>
-                     <p>Download PDF</p>
-                  </a>
-               </div>
-            </div>
+            <ul class="contact-list">
+               <li class="contact-item">
+                  <a href="mailto:girishburade@gmail.com"><svg class="ic"><use href="#i-mail"/></svg><span><small>email</small>girishburade@gmail.com</span></a>
+                  <button class="copy-btn" type="button" data-copy="girishburade@gmail.com" aria-label="Copy email address">Copy</button>
+               </li>
+               <li class="contact-item"><a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg><span><small>linkedin</small>in/girish-burade</span></a></li>
+               <li class="contact-item"><a href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg><span><small>github</small>Girish7010</span></a></li>
+               <li class="contact-item js-resume-item"><a class="js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg><span><small>resume</small>Download PDF</span></a></li>
+               <li class="contact-item">
+                  <a href="tel:+918668846084"><svg class="ic"><use href="#i-phone"/></svg><span><small>phone</small>+91 86688 46084</span></a>
+                  <button class="copy-btn" type="button" data-copy="+918668846084" aria-label="Copy phone number">Copy</button>
+               </li>
+               <li class="contact-item"><a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pen"/></svg><span><small>blog</small>Medium</span></a></li>
+            </ul>
          </div>
-         <p class="gb-slogan">Technology thrives when it's shared — keep it open.</p>
       </div>
    </section>
    </main>
 
-   <footer class="gb-footer">
-      <div class="container text-center">
-         <p>© <span id="year">2026</span> Girish Burade. All rights reserved.</p>
+   <footer class="footer">
+      <div class="container footer-inner">
+         <span>© <span id="year">2026</span> Girish Burade</span>
+         <span class="mono dim">static · no tracking · deployed on GitHub Pages</span>
       </div>
    </footer>
 
-   <script src="js/jquery.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script>
-   (function () {
-      // Footer year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Typing animation (typewriter + delete loop)
-      var roles = ['DevOps Engineer', 'Cloud Engineer', 'Cloud FinOps Specialist'];
-      var el = document.getElementById('typing-animation');
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (el && !reduce) {
-         var r = 0, i = 0, deleting = false;
-         (function tick() {
-            var word = roles[r];
-            i += deleting ? -1 : 1;
-            el.textContent = word.slice(0, i);
-            var delay = deleting ? 45 : 90;
-            if (!deleting && i === word.length) { deleting = true; delay = 1600; }
-            else if (deleting && i === 0) { deleting = false; r = (r + 1) % roles.length; delay = 300; }
-            setTimeout(tick, delay);
-         })();
-      }
-
-      // Experience auto-calculated from the job dates below — never goes stale
-      var months = 0, now = new Date();
-      document.querySelectorAll('.gb-job').forEach(function (job) {
-         var s = job.dataset.start.split('-'), e = job.dataset.end;
-         var start = new Date(+s[0], +s[1] - 1, 1);
-         var end = e === 'present' ? now : new Date(+e.split('-')[0], +e.split('-')[1], 0);
-         months += (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
-      });
-      if (months > 0) {
-         var y = Math.floor(months / 12), m = months % 12;
-         document.querySelectorAll('.js-exp-years').forEach(function (n) { n.textContent = y + '+ years'; });
-         document.querySelectorAll('.js-exp-exact').forEach(function (n) {
-            n.textContent = y + ' year' + (y === 1 ? '' : 's') + (m ? ' ' + m + ' month' + (m === 1 ? '' : 's') : '');
-         });
-      }
-
-      // Hide resume buttons if the PDF is missing (avoids a broken 404 download)
-      var link = document.querySelector('.js-resume-link');
-      if (link && window.fetch && location.protocol !== 'file:') {
-         fetch(link.getAttribute('href'), { method: 'HEAD' }).then(function (res) {
-            if (!res.ok) document.querySelectorAll('.js-resume-item').forEach(function (n) { n.style.display = 'none'; });
-         }).catch(function () {});
-      }
-
-      // Smooth scroll + close mobile menu after clicking a link
-      $(document).on('click', '#ftco-nav a[href^="#"], .navbar-brand', function (e) {
-         var target = $($(this).attr('href'));
-         if (!target.length) return;
-         e.preventDefault();
-         $('html, body').animate({ scrollTop: target.offset().top - 70 }, 450);
-         $('#ftco-nav').collapse('hide');
-      });
-
-      // Navbar background on scroll
-      var nav = document.getElementById('ftco-navbar');
-      function onScroll() { nav.classList.toggle('gb-scrolled', window.scrollY > 20); }
-      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-
-      // Fade-in on scroll
-      var items = document.querySelectorAll('.gb-card, .metric-card, .gb-job, .gb-heading');
-      if ('IntersectionObserver' in window && !reduce) {
-         var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('gb-in'); io.unobserve(en.target); } });
-         }, { threshold: 0.12 });
-         items.forEach(function (n) { n.classList.add('gb-reveal'); io.observe(n); });
-      }
-   })();
-   </script>
+   <!-- Architecture modal -->
+   <dialog class="arch-modal" id="arch-modal" aria-labelledby="arch-title">
+      <div class="arch-modal-head">
+         <div>
+            <span class="mono accent">architecture</span>
+            <h3 id="arch-title">Architecture</h3>
+         </div>
+         <button class="icon-btn" type="button" data-close aria-label="Close"><svg class="ic"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="diagram diagram-sm" id="arch-diagram"></div>
+      <p class="arch-note mono dim" id="arch-note"></p>
+   </dialog>
 </body>
 </html>
