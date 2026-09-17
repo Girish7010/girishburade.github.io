@@ -269,14 +269,14 @@
    }
 
    /* ---------------------------------------------------------------------
-      CI/CD pipeline — stages light up in sequence; hover/focus to inspect
+      CI/CD pipeline — a visual walkthrough (not a live pipeline).
+      Stages highlight in sequence; hover, focus or tap one to inspect it.
       --------------------------------------------------------------------- */
    var pipeline = $('.pipeline');
    if (pipeline) {
       var stages = $$('.stage', pipeline);
       var pTitle = $('#stage-title'), pTech = $('#stage-tech'), pText = $('#stage-text');
-      var runNo = $('#run-no'), status = $('#pipeline-status');
-      var step = 0, hovering = false, timer = null, visible = false;
+      var step = 0, pinned = -1, hovering = false, timer = null, visible = false;
 
       var showStage = function (i) {
          var st = stages[i], desc = $('.stage-desc', st);
@@ -284,59 +284,89 @@
          pTech.textContent = st.dataset.tech;
          pText.textContent = desc.textContent.replace($('b', desc).textContent, '').trim();
       };
-      var paint = function (i) {
+      var activate = function (i) {
          stages.forEach(function (s, j) {
             s.classList.toggle('done', j < i);
-            s.classList.toggle('running', j === i);
+            s.classList.toggle('active', j === i);
+            s.setAttribute('aria-current', j === i ? 'step' : 'false');
          });
-      };
-      var setStatus = function (text) {
-         status.lastChild.textContent = ' run #' + runNo.textContent + ' · ' + text;
+         showStage(i);
       };
       var tick = function () {
          timer = null;
-         if (!visible || hovering || document.hidden) return;
-         if (step < stages.length) {
-            paint(step);
-            showStage(step);
-            setStatus('running');
-            step++;
-            timer = setTimeout(tick, 1300);
-         } else {
-            paint(stages.length);
-            setStatus('passing');
-            step = 0;
-            timer = setTimeout(function () {
-               runNo.textContent = String(+runNo.textContent + 1);
-               tick();
-            }, 2600);
-         }
+         if (!visible || hovering || pinned > -1 || document.hidden) return;
+         activate(step);
+         step = (step + 1) % stages.length;
+         timer = setTimeout(tick, step === 0 ? 3200 : 1500);
       };
-      var resume = function () { if (!timer && visible && !hovering && !reduceMotion) tick(); };
-
-      // restructure status pill so the run number stays in its own span
-      status.innerHTML = '<span class="status-dot"></span><span id="run-no" hidden>' + runNo.textContent + '</span><span> run #' + runNo.textContent + ' · passing</span>';
-      runNo = $('#run-no');
+      var resume = function () { if (!timer && !reduceMotion) tick(); };
+      var stop = function () { clearTimeout(timer); timer = null; };
 
       stages.forEach(function (s, i) {
-         var enter = function () { hovering = true; clearTimeout(timer); timer = null; showStage(i); stages.forEach(function (x, j) { x.classList.toggle('running', j === i); }); };
-         var leave = function () { hovering = false; resume(); };
-         s.addEventListener('mouseenter', enter);
-         s.addEventListener('focus', enter);
-         s.addEventListener('mouseleave', leave);
-         s.addEventListener('blur', leave);
+         s.setAttribute('role', 'button');
+         s.addEventListener('mouseenter', function () { hovering = true; stop(); activate(i); });
+         s.addEventListener('mouseleave', function () { hovering = false; step = i; if (pinned < 0) resume(); });
+         s.addEventListener('focus', function () { stop(); activate(i); });
+         s.addEventListener('blur', function () { if (pinned < 0) { step = i; resume(); } });
+         var pin = function () {
+            pinned = pinned === i ? -1 : i;   // tap again to resume the walkthrough
+            stop();
+            activate(i);
+            if (pinned < 0) { step = i; resume(); }
+         };
+         s.addEventListener('click', pin);
+         s.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pin(); }
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); stages[Math.min(i + 1, stages.length - 1)].focus(); }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); stages[Math.max(i - 1, 0)].focus(); }
+         });
       });
 
-      if (reduceMotion) {
-         paint(stages.length);
-      } else if ('IntersectionObserver' in window) {
+      activate(0);
+      if (!reduceMotion && 'IntersectionObserver' in window) {
          new IntersectionObserver(function (entries) {
             visible = entries[0].isIntersecting;
-            if (visible) resume();
+            if (visible) resume(); else stop();
          }, { threshold: 0.3 }).observe(pipeline);
-         document.addEventListener('visibilitychange', resume);
+         document.addEventListener('visibilitychange', function () { if (!document.hidden && visible) resume(); });
       }
    }
+
+   /* ---------------------------------------------------------------------
+      Copy-to-clipboard buttons (contact section)
+      --------------------------------------------------------------------- */
+   function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+      return new Promise(function (resolve, reject) {
+         var ta = document.createElement('textarea');
+         ta.value = text;
+         ta.setAttribute('readonly', '');
+         ta.style.position = 'fixed';
+         ta.style.opacity = '0';
+         document.body.appendChild(ta);
+         ta.select();
+         ta.setSelectionRange(0, text.length);
+         var ok = false;
+         try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+         ta.remove();
+         if (ok) resolve(); else reject(new Error('copy failed'));
+      });
+   }
+   $$('.copy-btn').forEach(function (btn) {
+      var label = btn.textContent;
+      var reset;
+      btn.addEventListener('click', function () {
+         copyText(btn.dataset.copy).then(function () {
+            btn.textContent = '✓ Copied';
+            btn.classList.add('copied');
+         }, function () {
+            btn.textContent = 'Press Ctrl+C';
+         }).then(function () {
+            clearTimeout(reset);
+            reset = setTimeout(function () { btn.textContent = label; btn.classList.remove('copied'); }, 1800);
+         });
+      });
+   });
 
    /* ---------------------------------------------------------------------
       Terminal — typed intro, then a few real commands
@@ -350,7 +380,7 @@
          ['infrastructure --as-code', '<b>Terraform</b> <span class="dim">· dev / staging / prod</span>'],
          ['container --runtime', '<b>Docker</b> · Docker Compose · Amazon ECS'],
          ['monitoring --stack', 'CloudWatch · SNS · Uptime Kuma'],
-         ['pipeline --status', '<span class="t-ok">✓ build  ✓ test  ✓ deploy</span> — production ready']
+         ['pipeline --stages', 'code → build → test → image → ecr → deploy → <span class="t-ok">monitor</span>']
       ];
       var COMMANDS = {
          help: function () {
