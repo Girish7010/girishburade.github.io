@@ -1,629 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>Girish Burade Portfolio</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-      <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-      <link rel="stylesheet" href="css/animate.css">
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="css/magnific-popup.css">
-      <link rel="stylesheet" href="css/aos.css">
-      <link rel="stylesheet" href="css/ionicons.min.css">
-      <link rel="stylesheet" href="css/flaticon.css">
-      <link rel="stylesheet" href="css/icomoon.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/devops.css">
-      <style>
-         /*======================================
-         //--//-->   ABOUT
-         ======================================*/
-         .about-mf .box-shadow-full {
-         padding-top: 4rem;
-         padding-bottom: 4rem;
-         }
-         .about-mf .about-img {
-         margin-bottom: 2rem;
-         }
-         .about-mf .about-img img {
-         margin-left: 10px;
-         }
-         .skill-mf .progress {
-         /* background-color: #cde1f8; */
-         margin: .5rem 0 1.2rem 0;
-         border-radius: 0;
-         height: .7rem;
-         }
-         .skill-mf .progress .progress-bar {
-         height: .7rem;
-         background-color: #ffbd39;
-         }
-         /* Animation styles */
-         #typing-animation {
-         position: relative;
-         font-size: 30px;
-         font-weight: bold;
-         color: rgb(255, 255, 255);
-         overflow: hidden;
-         white-space: nowrap;
-         animation: typing 3s steps(20, end) infinite;
-         }
-         #typing-animation:before {
-         content: "";
-         /* position: absolute; */
-         top: 0;
-         left: 0;
-         width: 0;
-         height: 100%;
-         background-color: #ccc;
-         animation: typing-cursor 0.5s ease-in-out infinite;
-         }
-         @keyframes typing {
-         from {
-         width: 0;
-         }
-         to {
-         width: 100%;
-         }
-         }
-         @keyframes typing-cursor {
-         from {
-         width: 5px;
-         }
-         to {
-         width: 0;
-         }
-         }
-         /* project image zoom effect */
-         .zoom-effect {
-         overflow: hidden;
-         transition: transform 0.3s ease-out;
-         }
-         .zoom-effect:hover {
-         transform: scale(1.1);
-         }
-         .flex-row{
-            display: flex!important;
-            flex-direction: row!important;
-         }
-         .flex-column{
-            display: flex!important;
-            flex-direction: column!important;
-         }
-      </style>
-   </head>
-   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-         <div class="container">
-            <a class="navbar-brand" href="index.html">Girish Burade</a>
-            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Girish Burade | DevOps &amp; Cloud Engineer (AWS, Terraform, FinOps)</title>
+   <meta name="description" content="Girish Burade – Sr. DevOps & Cloud Engineer in Nagpur, India. AWS Certified Solutions Architect working with Terraform, CI/CD, Docker, security and FinOps.">
+   <meta name="author" content="Girish Burade">
+   <meta name="theme-color" content="#000000">
+   <link rel="canonical" href="https://girish7010.github.io/girishburade.github.io/">
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Girish Burade | DevOps & Cloud Engineer">
+   <meta property="og:description" content="AWS Certified DevOps & Cloud Engineer – Terraform, CI/CD, security and FinOps.">
+   <meta property="og:url" content="https://girish7010.github.io/girishburade.github.io/">
+   <meta property="og:image" content="https://girish7010.github.io/girishburade.github.io/images/girish-profile.jpg">
+   <meta name="twitter:card" content="summary">
+   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffbd39'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='30' fill='%23000'%3EGB%3C/text%3E%3C/svg%3E">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/icomoon.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/devops.css">
+   <link rel="stylesheet" href="css/polish.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="120">
+
+   <!-- ============ NAVBAR ============ -->
+   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+         <a class="navbar-brand" href="#home-section">Girish Burade</a>
+         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-               <ul class="navbar-nav nav ml-auto">
-                  <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-                  <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-                  <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Profile</span></a></li>
-                  <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-                  <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-                  <li class="nav-item d-flex align-items-center"><a href="#" onclick="downloadPDF()" class="btn-pill-yellow py-2 px-4" style="font-size: 12px;"><span style="color: #ff0000;">Click here</span> to Download Resume</a></li>
-               </ul>
-            </div>
-         </div>
-      </nav>
-      <section id="home-section" class="hero">
-         <div class="home-slider  owl-carousel">
-            <div class="slider-item ">
-               <div class="overlay"></div>
-               <div class="container">
-                  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-                     <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/);">
-                        <div class="overlay"></div>
-                     </div>
-                     <div class="one-forth d-flex flex-row  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '50%' }">
-                        <div class="text">
-
-                           <h1 class="mb-4 mt-3">I'm <span>Girish Burade </span></h1>
-                           <!-- Element to contain animated typing -->
-                           <span id="typing-animation"></span>
-                           <script>
-                              // Initialize the typing animation
-                              const typingAnimationElement = document.getElementById('typing-animation');
-                              // Create an array of typing text
-                              const typingTexts = [
-                              'DevOps Engineer  ',
-                              'Cloud Engineer  ',
-                              'Cloud FinOps Specialist  ',
-                              //   ',
-                              ];
-                              // Create a function to display the typing animation for a given text
-                              function playTypingAnimation(text) {
-                              // Loop through each character and add it to the element
-                              for (let i = 0; i < text.length; i++) {
-                              	setTimeout(() => {
-                              	typingAnimationElement.textContent += text[i];
-                              	}, i * 200); // Increase the delay to slow down the typing animation
-                              }
-
-                              // Once the animation is complete, reset the text and start over
-                              setTimeout(() => {
-                              	typingAnimationElement.textContent = '';
-                              	playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                              }, text.length * 200);
-                              }
-                              
-                              // Start the typing animation loop
-                              playTypingAnimation(typingTexts[0]);
-                           </script>	
-
-                           <h2 class="d-flex" style="margin-bottom: 0">
-                              DevOps and Cloud Engineer /FinOps💰📊 with 4.9+ years of experience, a love for motorcycles, and a strong passion for solving problems. 
-                           </h2>
-
-                           <!-- Buttons Row -->
-                           <div class="d-flex flex-wrap align-items-center mt-3">
-                               <!-- LinkedIn -->
-                               <a href="https://www.linkedin.com/in/girish-burade-895a75230/" class="btn btn-primary btn-pop py-3 px-3 mr-2 mb-2 d-flex align-items-center" target="_blank" style="border-radius: 30px;">
-                                   <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 18px; height: 18px; margin-right: 8px;"> LinkedIn
-                               </a>
-
-                               <!-- GitHub -->
-                               <a href="https://github.com/Girish7010" class="btn btn-primary btn-pop py-3 px-3 mr-2 mb-2 d-flex align-items-center" style="background-color: #e9ba45; color: black; border-radius: 30px;" target="_blank">
-                                   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 18px; height: 18px; margin-right: 8px;"> GitHub
-                               </a>
-
-                               <!-- Medium -->
-                               <a href="https://medium.com/@girishburade30792" class="btn btn-primary btn-pop py-3 px-3 mb-2 d-flex align-items-center" style="background-color: #ffbd39; color: white; border-radius: 30px;" target="_blank">
-                                   <img src="https://cdn-icons-png.flaticon.com/512/2111/2111505.png" style="width: 18px; height: 18px; margin-right: 8px;"> Blog
-                               </a>
-                           </div>
-                        </div>
-                        
-
-
-                        <div class="image flex-column" style="max-width: 50%;align-items: center;">
-                           <img src="images/oie_OkC1XJtADIPw-removebg-preview.png" alt="aws" style="width: 100%;">
-                           <img src="images/aws-ar.jpg" alt="aws" style="width:292px;"onclick="opencertificate()">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!-- Impact Metrics Section -->
-      <section class="ftco-section impact-metrics-section">
-        <div class="container">
-            <div class="row justify-content-center mb-4">
-               <div class="col-md-10 text-center heading-section ftco-animate">
-                  <h2 class="mb-4" style="font-weight: bold;">Delivering Business Impact Through DevOps</h2>
-                  <p>Bridges tech + business value.</p>
-               </div>
-            </div>
-            <div class="row">
-                 <div class="col-md-3 ftco-animate">
-                    <div class="metric-card hover-lift">
-                        <span class="metric-number">32%</span>
-                        <span class="metric-label">AWS Cost Reduction</span>
-                        <p class="metric-sub">via FinOps Practices</p>
-                    </div>
-                 </div>
-                 <div class="col-md-3 ftco-animate">
-                    <div class="metric-card hover-lift">
-                        <span class="metric-number">5 min</span>
-                        <span class="metric-label">Deployment Time</span>
-                        <p class="metric-sub">Reduced from 20 mins</p>
-                    </div>
-                 </div>
-                 <div class="col-md-3 ftco-animate">
-                    <div class="metric-card hover-lift">
-                        <span class="metric-number">99.95%</span>
-                        <span class="metric-label">Uptime Achieved</span>
-                        <p class="metric-sub">High Availability Architecture</p>
-                    </div>
-                 </div>
-                 <div class="col-md-3 ftco-animate">
-                    <div class="metric-card hover-lift">
-                        <span class="metric-number">100+</span>
-                        <span class="metric-label">Security Flaws Fixed</span>
-                        <p class="metric-sub">Automated Scans</p>
-                    </div>
-                 </div>
-            </div>
-        </div>
-      </section>
-      <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-         <div class="container">
-               <div class="row d-flex">
-                  <!-- Left Column: Image, Details, Skills -->
-                  <div class="col-md-6 col-lg-6 d-flex flex-column">
-                     <!-- Top Row: Image and Details side-by-side -->
-                     <div class="row justify-content-center align-items-center mb-4">
-                        <div class="col-md-6">
-                           <div class="about-img" style="width: 100%;">
-                              <img src="images/fotor-20250804172751.jpeg" class="img-fluid rounded-circle b-shadow-a" alt="Girish Burade" style="width: 100%; max-width: 250px; border: 5px solid #ffbd39;">
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <ul class="about-info px-md-0 px-2 mt-3 mt-md-0">
-                              <li class="d-flex"><span>Name:</span> <span>Girish Burade</span></li>
-                              <li class="d-flex"><span>Job Role:</span> <span>DevOps & Cloud Engineer</span></li>
-                              <li class="d-flex"><span>Experience:</span> <span>4 Years 9 Months</span></li>
-                              <li class="d-flex"><span>Address:</span> <span>Nagpur, India</span></li>
-                           </ul>
-                        </div>
-                     </div>
-                     
-                     <!-- Bottom Row: Skills -->
-                     <div class="row">
-                        <div class="col-md-12">
-                           <h3 class="mb-3" style="font-size: 20px;">Skills & Real-World Usage</h3>
-                           <div class="d-flex flex-column">
-                               <div class="mb-3 d-flex align-items-center">
-                                   <span class="devops-badge mr-2">AWS Cloud</span>
-                                   <div class="skill-context">Designed multi-AZ infra for fintech workloads</div>
-                               </div>
-                               <div class="mb-3 d-flex align-items-center">
-                                   <span class="devops-badge mr-2">Terraform</span>
-                                   <div class="skill-context">Used in 15+ prod deployments (Modules & State management)</div>
-                               </div>
-                               <div class="mb-3 d-flex align-items-center">
-                                   <span class="devops-badge mr-2">CI/CD</span>
-                                   <div class="skill-context">Automated build-test-deploy pipelines (GitHub Actions/Jenkins)</div>
-                               </div>
-                               <div class="mb-3 d-flex align-items-center">
-                                   <span class="devops-badge mr-2">Security & Compliance</span>
-                                   <div class="skill-context">Implemented IAM least privilege & Secrets Manager</div>
-                               </div>
-                               <div class="mb-3 d-flex align-items-center">
-                                   <span class="devops-badge mr-2">FinOps</span>
-                                   <div class="skill-context">Reduced monthly cloud spend by 32% via rightsizing</div>
-                               </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <!-- Right Column: Biography -->
-                  <div class="col-md-6 col-lg-6 pl-lg-5 py-5">
-                     <div class="row justify-content-start pb-3">
-                        <div class="col-md-12 heading-section ftco-animate">
-                           <h1 class="big">About</h1>
-                           <h2 class="mb-4">About Me</h2>
-                           <p>
-                              I have nearly five years of experience in building and managing CI/CD pipelines, automating infrastructure, improving system reliability, and reducing project costs. I work with tools like Docker, Terraform, and AWS to make workflows smoother and operations more efficient. I'm skilled at working with teams, adapting to changes, and creating scalable solutions to meet business needs.
-                           </p>
-                           <!-- Play Button / Intro Placeholder -->
-                           <div class="mt-5">
-                               <a href="#" class="btn-play d-flex align-items-center justify-content-center" style="width: 80px; height: 80px; background: #ffbd39; border-radius: 50%; box-shadow: 0px 10px 30px -4px rgba(255, 189, 57, 0.5);">
-                                   <span class="icon-play" style="color: #fff; font-size: 30px;"></span>
-                               </a>
-                               <p class="mt-2 text-muted">Watch 30s Intro (Coming Soon)</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-         </div>
-      </section>
-      <section class="ftco-section ftco-no-pb" id="resume-section">
-
-         <div class="container">
-            <div class="row justify-content-center pb-5">
-               <div class="col-md-10 heading-section text-center ftco-animate">
-                  <h1 class="big big-2">Profile</h1>
-                  <h2 class="mb-4">Profile</h2>
-                  <p>👨‍💻 Cloud Engineer & DevOps Specialist |Engineering Excellence 🚀</p>
-                  <p>Hey there! I’m a Cloud Engineer and DevOps expert with over 4 years of experience helping teams build, deploy, and manage apps more easily and reliably. I love working with tools like AWS, Terraform, and Docker to make things faster, smoother, and more automated ✨</p>
-                  <p>Love Docker 🐳? So do I! Need a pro in managing databases like MySQL or optimizing monitoring & logging with CloudWatch? I’ve got your back. I work seamlessly with Apache, Nginx, and version control systems like GitHub 🐙. My approach is always collaborative, efficient, and solutions-focused – especially in Agile teams 🤝.</p>
-                  <p>🔧 Tech Toolbox:
-                     ☁️ AWS | FinOps💰📊  |🐳 Docker | 📜 Terraform | 🖥️ Linux | 🔁 CI/CD | 🔧 Git | 🛢️ RDS | 👀 CloudWatch | 📦 Apache/Nginx & more
-                  </p>
-               </div>
-            </div>
-            <div class="row">
-               <h1 class="big-4">Experience</h1>
-               <div class="underline"></div>
-            </div>
-            <br>
-            <div class="row" >
- <!-- Indago Research Block -->
-<div class="col-md-12">
-   <div class="resume-wrap ftco-animate">
-      <span class="date">Oct 2025 - Present</span>
-      <h2>Sr. DevOps Engineer</h2>
-      <span class="position">
-         <a href="https://indago-research.com/" target="_blank" style="color: inherit; text-decoration: none;">
-            <span style="font-weight: bold; color: #ffbd39;">Indago Research</span> 
-            <span style="background: #28a745; color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 0.7em; font-weight: bold; vertical-align: middle; margin-left: 5px;">CURRENT COMPANY</span>
-            → <span style="font-size: 0.9em; color: #007bff;">(Visit Website)</span>
-         </a>
-      </span>
-      <p class="mt-4">
-         We are a boutique financial and investment research firm trusted by top Investment Banks, Private Equity Firms, and Wealth Managers.
-      </p>
-      <ul>
-         <li>Specializing in customized mandates, we deliver data-driven insights that enhance decision-making and streamline deal processes, helping businesses stay agile and competitive.</li>
-         <li>Business Goal: Solve clients’ problems collaboratively, not operate as a simple vendor.</li>
-      </ul>
-   </div>
-</div>
-
-<!-- Thinkbiz Block -->
-<div class="col-md-12">
-   <div class="resume-wrap ftco-animate">
-      <span class="date">Feb 2022 - Jul 2025</span>
-      <h2>DevOps Engineer</h2>
-      <span class="position">
-         <a href="https://thinkbiz.co.in/" target="_blank" style="color: inherit; text-decoration: none;">
-            <span style="font-weight: bold; color: #ffbd39;">Thinkbiz Technology Pvt Ltd</span> → <span style="font-size: 0.9em; color: #007bff;">(Click to visit)</span>
-         </a>
-      </span>
-      <p class="mt-4">
-         Thinkbiz Technology Pvt Ltd, a global technology company and part of VeBuIn 株式会社, brings together a diverse team of experienced professionals worldwide to deliver cutting-edge solutions and services.
-      </p>
-      <ul>
-         <li>“We Build Innovation for Better Society".</li>
-      </ul>
-   </div>
-</div>
-
-<!-- Genericure Block -->
-<div class="col-md-12">
-   <div class="resume-wrap ftco-animate">
-      <span class="date">Jan 2020 - Nov 2020</span>
-      <h2>Cloud Engineer</h2>
-      <span class="position">
-         <a href="https://www.genericure.in/" target="_blank" style="color: inherit; text-decoration: none;">
-            <span style="font-weight: bold; color: #ffbd39;">Genericure</span> → <span style="font-size: 0.9em; color: #007bff;">(Click to visit)</span>
-         </a>
-      </span>
-      <p class="mt-4">"Genericure: Quality Healthcare, Affordably Yours".</p>
-      <ul>
-         <li>Genericure is revolutionizing healthcare across India with high-quality, FDA-approved generic medicines at up to 90% savings. As your trusted online pharmacy, we offer seamless Pan-India ordering, fast doorstep delivery, and prescribed brand-name medications, ensuring affordable, reliable care. Start saving on your prescriptions today with Genericure!</li>
-      </ul>
-   </div>
-</div>
-         </div>
-
-         </div>
-      </section>
-
-       <!-- How I Work & Security Section -->
-       <section class="ftco-section ftco-no-pb" id="philosophy-section">
-           <div class="container">
-              <div class="row justify-content-center mb-5">
-                 <div class="col-md-10 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Philosophy</h1>
-                    <h2 class="mb-4">How I Work</h2>
-                 </div>
-              </div>
-              <div class="row">
-                 <div class="col-md-4">
-                    <div class="how-i-work-card ftco-animate hover-lift">
-                       <span class="how-i-work-icon icon-users"></span>
-                       <h3 class="how-title">Collaborative</h3>
-                       <p>Work closely with developers. Prefer blameless postmortems and shared ownership. "You build it, you run it."</p>
-                    </div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="how-i-work-card ftco-animate hover-lift">
-                       <span class="how-i-work-icon icon-cogs"></span>
-                       <h3 class="how-title">Automate First</h3>
-                       <p>If I have to do it twice, I automate it. Terraform, Ansible, and Python are my tools of choice.</p>
-                    </div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="how-i-work-card ftco-animate hover-lift">
-                       <span class="how-i-work-icon icon-shield"></span>
-                       <h3 class="how-title">Security & Reliability</h3>
-                       <ul class="security-list" style="list-style: none; padding: 0;">
-                          <li><span class="security-icon icon-check"></span> IAM Least Privilege</li>
-                          <li><span class="security-icon icon-check"></span> Secrets Rotation (AWS Secrets Manager)</li>
-                          <li><span class="security-icon icon-check"></span> Backup & DR Strategy</li>
-                       </ul>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </section>
-      <section class="ftco-section" id="project-section">
-         <div class="container">
-         <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-               <h1 class="big big-2">Projects</h1>
-               <h2 class="mb-4">Projects</h2>
-               <p>Below are sample DevOps Security Check Automation and More on My GitHub</p>
-               <p style="color: rgb(225, 255, 0); font-weight: bold;"> 🔴Explore my full projects & source code on GitHub | 📝 Read my blogs on Medium
-              </p>
-            </div>
-         </div>
-         <div class="row d-flex justify-content-center">
-          <div class="col-md-4 d-flex ftco-animate">
-             <div class="blog-entry hover-lift justify-content-end" style="height: 100%; display: flex; flex-direction: column;">
-                <a href="https://github.com/Girish7010" class="block-20 zoom-effect" style="background-image: url('images/1_KL-uMnZnNP-AYTuHzLDBGg.png');">
-                </a>
-                <div class="text mt-3 float-right d-flex flex-column" style="flex-grow: 1;">
-                   <h3 class="heading">
-                   <a href="https://github.com/Girish7010">🔐Security Check Automation for Cloud Accounts </a></h3>
-                   <p class="project-desc">🔐 Added automatic security checks in the DevOps pipeline to scan 💻 code and 📦 containers for issues before deployment. This helped 🚫 catch problems early, ✅ improve software quality, and make the release process more 🔄 secure and reliable.</p>
-                </div>
-             </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-             <div class="blog-entry hover-lift justify-content-end" style="height: 100%; display: flex; flex-direction: column;">
-                <a href="https://github.com/Girish7010" class="block-20 zoom-effect" style="background-image: url('images/uptime.png');">
-                </a>
-                <div class="text mt-3 float-right d-flex flex-column" style="flex-grow: 1;">
-                   <h3 class="heading">
-                   <a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma.git"> 🔔 Real-Time Monitoring & Alerting Setup Uptime-Kuma</a></h3>
-                   <p class="project-desc">🔍Configured Uptime Kuma to monitor critical services across 🧪 Dev, 🛠️ Staging, and 🚀 Production environments. 🔗 Integrated with Microsoft Teams for instant alerts and enabled 📞 mobile call notifications to ensure immediate awareness and response to incidents.</p>
-                </div>
-             </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-             <div class="blog-entry hover-lift" style="height: 100%; display: flex; flex-direction: column;">
-                <a href="https://github.com/Girish7010" class="block-20 zoom-effect" style="background-image: url('images/aws.png');">
-                </a>
-                <div class="text mt-3 float-right d-flex flex-column" style="flex-grow: 1;">
-                   <h3 class="heading">
-                   <a href="https://github.com/Girish7010">✅ AWS Best Practices Implemented Across Projects</a></h3>
-                   <p class="project-desc">(Showcasing Security, Automation, Cost Optimization & More) 🔒 Security & Identity Management: Implemented IAM roles and policies following least privilege access principles. Used AWS Secrets Manager to securely store and rotate credentials and API keys. ☁️ Infrastructure as Code: Provisioned AWS resources using Terraform for consistent, repeatable deployments across environments.</p>
-                </div>
-             </div>
-          </div>
-   <!-- ECS Project -->
-   <div class="col-md-12 d-flex ftco-animate">
-      <div class="blog-entry hover-lift">
-         <div class="text mt-3 float-right d-block">
-            <h2 class="heading">
-               <a href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment.git" target="_blank">
-                  🖥️ Scalable Web Application on AWS ECS + EC2 ← Click to check Full Project
-               </a>
-            </h2>
-            <p>🚀 Built a production-ready Flask app on <strong>AWS ECS (EC2 launch type)</strong> 
-               with blue-green deployments, auto-scaling, and a PostgreSQL RDS database.
-            </p>
-
-            <p>🏗️ <strong>Architecture:</strong><br>
-               ALB → ECS Cluster (EC2) → RDS PostgreSQL → Auto-scaling Groups → CloudWatch Monitoring
-            </p>
-
-            <p>✨ <strong>Highlights:</strong><br>
-               ✅ Blue-Green Deployments (zero downtime)<br>
-               ✅ Auto-scaling & Multi-AZ High Availability<br>
-               ✅ Secure with IAM, VPC private subnets & Secrets Manager<br>
-               ✅ CloudWatch Monitoring & Alerts<br>
-               ✅ IaC with Terraform + Docker-based Deployment
-            </p>
-            <p>☁️ <strong>Infrastructure as Code:</strong><br>
-               Provisioned AWS resources using Terraform for consistent, repeatable deployments across environments.
-             <!-- Recruiter CTA -->
-            <div class="row justify-content-center" id="contact-section">
-                <div class="col-md-12 text-center ftco-animate">
-                    <div class="p-4" style="border: 2px solid #ffbd39; border-radius: 8px;">
-                        <h3 class="mb-3" style="color: #ffbd39;">🚀 Open to Roles</h3>
-                        <p class="mb-4"><strong>DevOps Engineer | Site Reliability Engineer (SRE) | Cloud Engineer | FinOps Engineer</strong><br>
-                        📍 Remote / India / Hybrid / WFO</p>
-                        
-                        <hr style="border-top: 1px solid rgba(255,189,57,0.3); margin: 2rem 0;">
-                        
-                        <h2 class="mb-3" style="font-size: 24px;">Contact Me</h2>
-                        <p class="mb-4">Below are the details to reach out to me!</p>
-                        
-                        <div class="row">
-                            <div class="col-md-3 mb-3">
-                                <div class="p-3 rounded hover-lift" style="background: rgba(255,255,255,0.05); height: 100%;">
-                                    <div class="icon mb-2"><span class="icon-map-signs" style="color: #ffbd39; font-size: 24px;"></span></div>
-                                    <h4 style="font-size: 16px; font-weight: bold;">Address</h4>
-                                    <p>Nagpur, India</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <div class="p-3 rounded hover-lift" style="background: rgba(255,255,255,0.05); height: 100%;">
-                                    <div class="icon mb-2"><span class="icon-phone2" style="color: #ffbd39; font-size: 24px;"></span></div>
-                                    <h4 style="font-size: 16px; font-weight: bold;">Contact Number</h4>
-                                    <p><a href="tel://+918668846084">+91-8668846084</a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <div class="p-3 rounded hover-lift" style="background: rgba(255,255,255,0.05); height: 100%;">
-                                    <div class="icon mb-2"><span class="icon-paper-plane" style="color: #ffbd39; font-size: 24px;"></span></div>
-                                    <h4 style="font-size: 16px; font-weight: bold;">Email Address</h4>
-                                    <p style="word-break: break-all;"><a href="mailto:girishburade@gmail.com">girishburade@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <div class="p-3 rounded hover-lift" style="background: rgba(255,255,255,0.05); height: 100%;">
-                                    <div class="icon mb-2"><span class="icon-globe" style="color: #ffbd39; font-size: 24px;"></span></div>
-                                    <h4 style="font-size: 16px; font-weight: bold;">Download Resume</h4>
-                                    <p><a href="#" onclick="downloadPDF()" class="btn-pill-yellow mt-2"><span style="color: #ff0000;">Click here</span> to Download Resume</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </p>
+         </button>
+         <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto align-items-lg-center">
+               <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+               <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+               <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+               <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+               <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+               <li class="nav-item ml-lg-3 js-resume-item">
+                  <a href="docs/Girish_Devops_update_CV.pdf" download class="btn-resume js-resume-link">
+                     <span class="icon-download" aria-hidden="true"></span> Resume
+                  </a>
+               </li>
+            </ul>
          </div>
       </div>
-   </div>
+   </nav>
 
+   <main>
+   <!-- ============ HERO ============ -->
+   <section id="home-section" class="gb-hero">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-7 order-2 order-lg-1">
+               <p class="gb-eyebrow"><span class="gb-dot"></span> Open to new roles</p>
+               <h1 class="gb-title">Hi, I'm <span>Girish Burade</span></h1>
+               <p class="gb-role"><span id="typing-animation">DevOps Engineer</span><span class="gb-caret" aria-hidden="true"></span></p>
+               <p class="gb-lead">
+                  DevOps, Cloud &amp; FinOps engineer with <strong class="js-exp-years">5+ years</strong> of experience
+                  building reliable, secure and cost-efficient infrastructure on AWS. Motorcycle enthusiast and
+                  problem-solver at heart.
+               </p>
+               <div class="gb-actions">
+                  <a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener" class="gb-btn gb-btn-primary">
+                     <span class="icon-linkedin" aria-hidden="true"></span> LinkedIn
+                  </a>
+                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener" class="gb-btn gb-btn-outline">
+                     <span class="icon-github" aria-hidden="true"></span> GitHub
+                  </a>
+                  <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener" class="gb-btn gb-btn-outline">
+                     <span class="icon-medium" aria-hidden="true"></span> Blog
+                  </a>
+               </div>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+               <a href="https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile" target="_blank" rel="noopener" class="gb-cert" title="Verify certification on Credly">
+                  <img src="images/aws-ar.jpg" alt="AWS Certified Solutions Architect – Associate badge" width="260" height="260">
+                  <span class="gb-cert-label">AWS Certified Solutions Architect – Associate <span class="icon-external-link" aria-hidden="true"></span></span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
 
-      
-      <!-- Slogan Section -->
-      <section class="ftco-section ftco-no-pt ftco-no-pb mb-5">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-md-10 text-center">
-                  <h3 class="blink-slogan" style="margin: 0; font-size: 20px;">
-                     💡🏴‍☠️ Technology thrives when it's shared — not sold. Keep it Open, Keep it Free.
-                  </h3>
+   <!-- ============ IMPACT METRICS ============ -->
+   <section class="gb-section impact-metrics-section">
+      <div class="container">
+         <div class="gb-heading text-center">
+            <h2>Delivering Business Impact Through DevOps</h2>
+            <p>Where engineering decisions meet business value.</p>
+         </div>
+         <div class="row">
+            <div class="col-6 col-lg-3 mb-4">
+               <div class="metric-card">
+                  <span class="metric-number">32%</span>
+                  <span class="metric-label">AWS Cost Reduction</span>
+                  <p class="metric-sub">via FinOps practices</p>
+               </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-4">
+               <div class="metric-card">
+                  <span class="metric-number">5 min</span>
+                  <span class="metric-label">Deployment Time</span>
+                  <p class="metric-sub">Reduced from 20 mins</p>
+               </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-4">
+               <div class="metric-card">
+                  <span class="metric-number">99.95%</span>
+                  <span class="metric-label">Uptime Achieved</span>
+                  <p class="metric-sub">High-availability architecture</p>
+               </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-4">
+               <div class="metric-card">
+                  <span class="metric-number">100+</span>
+                  <span class="metric-label">Security Flaws Fixed</span>
+                  <p class="metric-sub">Automated scans</p>
                </div>
             </div>
          </div>
-         <style>
-             .blink-slogan {
-               color: #66ff33;
-               font-weight: bold;
-               animation: blink 3s infinite;
-             }
-             @keyframes blink {
-               0%, 100% { opacity: 1; }
-               50% { opacity: 0.5; }
-             }
-         </style>
-      </section>
+      </div>
+   </section>
 
-      <footer class="ftco-footer" style="padding: 2em 0;">
-         <div class="container">
+   <!-- ============ ABOUT ============ -->
+   <section class="gb-section" id="about-section">
+      <div class="container">
+         <div class="gb-heading text-center">
+            <span class="gb-kicker">About</span>
+            <h2>About Me</h2>
+         </div>
          <div class="row">
-         <div class="col-md-12 text-center">
-             <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved</p>
-         </div>
-         </div>
-         </div>
-         </footer>
-         <!-- loader -->
-         <div id="ftco-loader" class="show fullscreen">
-         <svg class="circular" width="48px" height="48px">
-         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
-         </svg>
-      </section>
-      </div> <!-- End of .row -->
+            <div class="col-lg-5 mb-5 mb-lg-0">
+               <div class="gb-card gb-profile">
+                  <img src="images/girish-profile.jpg" alt="Girish Burade" class="gb-avatar" width="180" height="180" loading="lazy">
+                  <ul class="gb-facts">
+                     <li><span>Name</span><span>Girish Burade</span></li>
+                     <li><span>Role</span><span>Sr. DevOps &amp; Cloud Engineer</span></li>
+                     <li><span>Experience</span><span class="js-exp-exact">5+ years</span></li>
+                     <li><span>Location</span><span>Nagpur, India</span></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-lg-7 pl-lg-5">
+               <p class="gb-text">
+                  I build and manage CI/CD pipelines, automate infrastructure, improve system reliability and
+                  reduce cloud costs. I work daily with AWS, Terraform and Docker to make delivery faster and
+                  operations more efficient, and I enjoy working closely with development teams in Agile
+                  environments to create scalable solutions that meet real business needs.
+               </p>
 
-      <script>
-    function downloadPDF() {
-      const link = document.createElement("a");
-      link.href = "docs/Girish_Devops_update_CV.pdf"; // Replace with your file path
-      link.download = "Girish_Devops_update_CV.pdf"; // This will be the downloaded filename
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+               <h3 class="gb-subtitle">Skills &amp; Real-World Usage</h3>
+               <ul class="gb-skills">
+                  <li><span class="devops-badge">AWS Cloud</span><span>Designed multi-AZ infrastructure for fintech workloads</span></li>
+                  <li><span class="devops-badge">Terraform</span><span>Used in 15+ production deployments (modules &amp; state management)</span></li>
+                  <li><span class="devops-badge">CI/CD</span><span>Automated build-test-deploy pipelines (GitHub Actions / Jenkins)</span></li>
+                  <li><span class="devops-badge">Security</span><span>Implemented IAM least privilege &amp; AWS Secrets Manager</span></li>
+                  <li><span class="devops-badge">FinOps</span><span>Reduced monthly cloud spend by 32% via rightsizing</span></li>
+               </ul>
 
-    function opencertificate() {
-    window.open("https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile","_blank")
-    }
+               <h3 class="gb-subtitle">Tech Toolbox</h3>
+               <div class="gb-tags">
+                  <span>AWS</span><span>Terraform</span><span>Docker</span><span>Linux</span>
+                  <span>GitHub Actions</span><span>Jenkins</span><span>Ansible</span><span>Python</span><span>Git</span>
+                  <span>RDS / MySQL / PostgreSQL</span><span>CloudWatch</span><span>Uptime Kuma</span><span>Apache / Nginx</span><span>FinOps</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
 
-  
-  </script>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery-migrate-3.0.1.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jquery.easing.1.3.js"></script>
-      <script src="js/jquery.waypoints.min.js"></script>
-      <script src="js/jquery.stellar.min.js"></script>
-      <script src="js/owl.carousel.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/jquery.animateNumber.min.js"></script>
-      <script src="js/scrollax.min.js"></script>
-      <script src="js/main.js"></script>
-   </body>
+   <!-- ============ EXPERIENCE ============ -->
+   <section class="gb-section" id="resume-section">
+      <div class="container">
+         <div class="gb-heading text-center">
+            <span class="gb-kicker">Career</span>
+            <h2>Experience</h2>
+         </div>
+
+         <div class="gb-timeline">
+            <!-- Quralyst AI (Indago Research) — content mirrors docs/Girish_Devops_update_CV.pdf -->
+            <article class="gb-job" data-start="2025-10" data-end="present">
+               <div class="gb-job-head">
+                  <div>
+                     <h3>Senior DevOps / Cloud Engineer</h3>
+                     <a href="https://quralyst.ai/" target="_blank" rel="noopener" class="gb-company">Quralyst AI <span class="icon-external-link" aria-hidden="true"></span></a>
+                     <span class="gb-company-parent">by <a href="https://indago-research.com/" target="_blank" rel="noopener">Indago Research</a></span>
+                     <span class="gb-badge-current">Current</span>
+                  </div>
+                  <span class="gb-date">Oct 2025 – Present</span>
+               </div>
+               <p class="gb-job-desc">AI-driven deal-sourcing platform · Bengaluru, India (Remote)</p>
+               <ul>
+                  <li>Built and operate production AWS infrastructure on EC2, running frontend, backend, scraper and Redis workloads as isolated Docker / Docker Compose services.</li>
+                  <li>Implemented end-to-end deployment automation with AWS CodeDeploy, CodeBuild and Amazon ECR, removing manual release steps.</li>
+                  <li>Configured Nginx reverse proxy with domain-based HTTP/HTTPS routing and SSL/TLS termination; injected secrets via AWS Secrets Manager.</li>
+                  <li>Engineered CloudWatch monitoring, alarms and SNS notifications to detect production issues before user impact.</li>
+               </ul>
+            </article>
+
+            <!-- Thinkbiz -->
+            <article class="gb-job" data-start="2022-02" data-end="2025-07">
+               <div class="gb-job-head">
+                  <div>
+                     <h3>DevOps Engineer</h3>
+                     <a href="https://thinkbiz.co.in/" target="_blank" rel="noopener" class="gb-company">Thinkbiz Technology Pvt Ltd <span class="icon-external-link" aria-hidden="true"></span></a>
+                  </div>
+                  <span class="gb-date">Feb 2022 – Jul 2025</span>
+               </div>
+               <p class="gb-job-desc">Ahmedabad, India</p>
+               <ul>
+                  <li>Automated infrastructure provisioning with Terraform across Dev, Staging and Production environments.</li>
+                  <li>Built and maintained GitLab CI/CD pipelines with Docker for Amazon ECS deployments.</li>
+                  <li>Set up CloudWatch and Uptime Kuma monitoring integrated with Microsoft Teams, plus centralized logging and proactive alerting.</li>
+                  <li>Delivered cloud cost optimization with AWS Budgets, Cost Explorer and Cost Anomaly Detection; enforced compliance with AWS Config drift detection.</li>
+                  <li>Executed database migrations, version upgrades and full cloud account migrations with minimal downtime.</li>
+               </ul>
+            </article>
+
+            <!-- Genericure -->
+            <article class="gb-job" data-start="2020-01" data-end="2020-11">
+               <div class="gb-job-head">
+                  <div>
+                     <h3>Cloud Engineer (AWS)</h3>
+                     <a href="https://www.genericure.in/" target="_blank" rel="noopener" class="gb-company">Genericure <span class="icon-external-link" aria-hidden="true"></span></a>
+                  </div>
+                  <span class="gb-date">Jan 2020 – Nov 2020</span>
+               </div>
+               <p class="gb-job-desc">Nagpur, India</p>
+               <ul>
+                  <li>Designed and deployed AWS infrastructure for web applications, standing up new project environments from scratch.</li>
+                  <li>Automated provisioning and configuration using AWS CLI and shell scripting.</li>
+                  <li>Implemented backup and disaster recovery strategies for business-critical AWS resources.</li>
+                  <li>Applied cost optimization and AWS security best practices; owned monitoring and incident troubleshooting.</li>
+               </ul>
+            </article>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============ HOW I WORK ============ -->
+   <section class="gb-section" id="philosophy-section">
+      <div class="container">
+         <div class="gb-heading text-center">
+            <span class="gb-kicker">Philosophy</span>
+            <h2>How I Work</h2>
+         </div>
+         <div class="row">
+            <div class="col-md-4 mb-4">
+               <div class="gb-card gb-work">
+                  <span class="gb-work-icon icon-users" aria-hidden="true"></span>
+                  <h3>Collaborative</h3>
+                  <p>Work closely with developers. Prefer blameless postmortems and shared ownership — "you build it, you run it."</p>
+               </div>
+            </div>
+            <div class="col-md-4 mb-4">
+               <div class="gb-card gb-work">
+                  <span class="gb-work-icon icon-cogs" aria-hidden="true"></span>
+                  <h3>Automate First</h3>
+                  <p>If I have to do it twice, I automate it. Terraform, Ansible and Python are my tools of choice.</p>
+               </div>
+            </div>
+            <div class="col-md-4 mb-4">
+               <div class="gb-card gb-work">
+                  <span class="gb-work-icon icon-shield" aria-hidden="true"></span>
+                  <h3>Security &amp; Reliability</h3>
+                  <ul class="gb-checks">
+                     <li><span class="icon-check" aria-hidden="true"></span> IAM least privilege</li>
+                     <li><span class="icon-check" aria-hidden="true"></span> Secrets rotation (AWS Secrets Manager)</li>
+                     <li><span class="icon-check" aria-hidden="true"></span> Backup &amp; DR strategy</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============ PROJECTS ============ -->
+   <section class="gb-section" id="project-section">
+      <div class="container">
+         <div class="gb-heading text-center">
+            <span class="gb-kicker">Work</span>
+            <h2>Projects</h2>
+            <p>DevOps, security automation and AWS work. Full source code on <a href="https://github.com/Girish7010" target="_blank" rel="noopener">GitHub</a> and write-ups on <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener">Medium</a>.</p>
+         </div>
+
+         <!-- Featured project -->
+         <article class="gb-card gb-featured mb-5">
+            <span class="gb-kicker-sm">Featured project</span>
+            <h3>Scalable Web Application on AWS ECS + EC2</h3>
+            <p>Production-ready Flask app on <strong>AWS ECS (EC2 launch type)</strong> with blue-green deployments, auto-scaling and a PostgreSQL RDS database.</p>
+            <div class="gb-arch" aria-label="Architecture">
+               <span>ALB</span><i>→</i><span>ECS Cluster (EC2)</span><i>→</i><span>RDS PostgreSQL</span><i>→</i><span>Auto Scaling</span><i>→</i><span>CloudWatch</span>
+            </div>
+            <div class="row">
+               <div class="col-md-7">
+                  <ul class="gb-checks">
+                     <li><span class="icon-check" aria-hidden="true"></span> Blue-green deployments (zero downtime)</li>
+                     <li><span class="icon-check" aria-hidden="true"></span> Auto-scaling &amp; Multi-AZ high availability</li>
+                     <li><span class="icon-check" aria-hidden="true"></span> Secured with IAM, private VPC subnets &amp; Secrets Manager</li>
+                     <li><span class="icon-check" aria-hidden="true"></span> CloudWatch monitoring &amp; alerts</li>
+                     <li><span class="icon-check" aria-hidden="true"></span> IaC with Terraform + Docker-based deployment</li>
+                  </ul>
+               </div>
+               <div class="col-md-5 d-flex align-items-end justify-content-md-end mt-3 mt-md-0">
+                  <a href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment" target="_blank" rel="noopener" class="gb-btn gb-btn-primary">
+                     <span class="icon-github" aria-hidden="true"></span> View source
+                  </a>
+               </div>
+            </div>
+         </article>
+
+         <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+               <article class="gb-card gb-project">
+                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener" class="gb-project-img">
+                     <img src="images/1_KL-uMnZnNP-AYTuHzLDBGg.png" alt="DevOps security best practice diagram" loading="lazy">
+                  </a>
+                  <div class="gb-project-body">
+                     <h3><a href="https://github.com/Girish7010" target="_blank" rel="noopener">Security Check Automation for Cloud Accounts</a></h3>
+                     <p>Added automatic security checks to the DevOps pipeline to scan code and containers before deployment — catching issues early and making releases more secure and reliable.</p>
+                     <div class="gb-tags gb-tags-sm"><span>DevSecOps</span><span>CI/CD</span><span>Containers</span></div>
+                  </div>
+               </article>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+               <article class="gb-card gb-project">
+                  <a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener" class="gb-project-img">
+                     <img src="images/uptime-kuma.jpg" alt="Uptime Kuma monitoring dashboard" loading="lazy">
+                  </a>
+                  <div class="gb-project-body">
+                     <h3><a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener">Real-Time Monitoring &amp; Alerting with Uptime Kuma</a></h3>
+                     <p>Monitors critical services across Dev, Staging and Production. Integrated with Microsoft Teams for instant alerts, plus mobile call notifications for fast incident response.</p>
+                     <div class="gb-tags gb-tags-sm"><span>Monitoring</span><span>Alerting</span><span>MS Teams</span></div>
+                  </div>
+               </article>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+               <article class="gb-card gb-project">
+                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener" class="gb-project-img">
+                     <img src="images/aws-best-practices.jpg" alt="AWS best practices" loading="lazy">
+                  </a>
+                  <div class="gb-project-body">
+                     <h3><a href="https://github.com/Girish7010" target="_blank" rel="noopener">AWS Best Practices Across Projects</a></h3>
+                     <p>IAM roles and policies following least privilege, credentials and API keys stored and rotated in Secrets Manager, and all resources provisioned with Terraform for repeatable deployments.</p>
+                     <div class="gb-tags gb-tags-sm"><span>IAM</span><span>Secrets Manager</span><span>Terraform</span></div>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- ============ CONTACT ============ -->
+   <section class="gb-section" id="contact-section">
+      <div class="container">
+         <div class="gb-card gb-contact">
+            <div class="text-center mb-4">
+               <span class="gb-kicker-sm">Open to roles</span>
+               <h2>Let's work together</h2>
+               <p class="gb-roles">DevOps Engineer · Cloud Engineer · FinOps Engineer</p>
+               <p class="gb-muted">Remote · Hybrid · On-site (India)</p>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-sm-6 col-lg-3 mb-3">
+                  <div class="gb-contact-item">
+                     <span class="icon-map-marker" aria-hidden="true"></span>
+                     <h4>Location</h4>
+                     <p>Nagpur, India</p>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-lg-3 mb-3">
+                  <a class="gb-contact-item" href="tel:+918668846084">
+                     <span class="icon-phone" aria-hidden="true"></span>
+                     <h4>Phone</h4>
+                     <p>+91 86688 46084</p>
+                  </a>
+               </div>
+               <div class="col-sm-6 col-lg-3 mb-3">
+                  <a class="gb-contact-item" href="mailto:girishburade@gmail.com">
+                     <span class="icon-envelope" aria-hidden="true"></span>
+                     <h4>Email</h4>
+                     <p>girishburade@gmail.com</p>
+                  </a>
+               </div>
+               <div class="col-sm-6 col-lg-3 mb-3 js-resume-item">
+                  <a class="gb-contact-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download>
+                     <span class="icon-file-pdf-o" aria-hidden="true"></span>
+                     <h4>Resume</h4>
+                     <p>Download PDF</p>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <p class="gb-slogan">Technology thrives when it's shared — keep it open.</p>
+      </div>
+   </section>
+   </main>
+
+   <footer class="gb-footer">
+      <div class="container text-center">
+         <p>© <span id="year">2026</span> Girish Burade. All rights reserved.</p>
+      </div>
+   </footer>
+
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script>
+   (function () {
+      // Footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Typing animation (typewriter + delete loop)
+      var roles = ['DevOps Engineer', 'Cloud Engineer', 'Cloud FinOps Specialist'];
+      var el = document.getElementById('typing-animation');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (el && !reduce) {
+         var r = 0, i = 0, deleting = false;
+         (function tick() {
+            var word = roles[r];
+            i += deleting ? -1 : 1;
+            el.textContent = word.slice(0, i);
+            var delay = deleting ? 45 : 90;
+            if (!deleting && i === word.length) { deleting = true; delay = 1600; }
+            else if (deleting && i === 0) { deleting = false; r = (r + 1) % roles.length; delay = 300; }
+            setTimeout(tick, delay);
+         })();
+      }
+
+      // Experience auto-calculated from the job dates below — never goes stale
+      var months = 0, now = new Date();
+      document.querySelectorAll('.gb-job').forEach(function (job) {
+         var s = job.dataset.start.split('-'), e = job.dataset.end;
+         var start = new Date(+s[0], +s[1] - 1, 1);
+         var end = e === 'present' ? now : new Date(+e.split('-')[0], +e.split('-')[1], 0);
+         months += (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+      });
+      if (months > 0) {
+         var y = Math.floor(months / 12), m = months % 12;
+         document.querySelectorAll('.js-exp-years').forEach(function (n) { n.textContent = y + '+ years'; });
+         document.querySelectorAll('.js-exp-exact').forEach(function (n) {
+            n.textContent = y + ' year' + (y === 1 ? '' : 's') + (m ? ' ' + m + ' month' + (m === 1 ? '' : 's') : '');
+         });
+      }
+
+      // Hide resume buttons if the PDF is missing (avoids a broken 404 download)
+      var link = document.querySelector('.js-resume-link');
+      if (link && window.fetch && location.protocol !== 'file:') {
+         fetch(link.getAttribute('href'), { method: 'HEAD' }).then(function (res) {
+            if (!res.ok) document.querySelectorAll('.js-resume-item').forEach(function (n) { n.style.display = 'none'; });
+         }).catch(function () {});
+      }
+
+      // Smooth scroll + close mobile menu after clicking a link
+      $(document).on('click', '#ftco-nav a[href^="#"], .navbar-brand', function (e) {
+         var target = $($(this).attr('href'));
+         if (!target.length) return;
+         e.preventDefault();
+         $('html, body').animate({ scrollTop: target.offset().top - 70 }, 450);
+         $('#ftco-nav').collapse('hide');
+      });
+
+      // Navbar background on scroll
+      var nav = document.getElementById('ftco-navbar');
+      function onScroll() { nav.classList.toggle('gb-scrolled', window.scrollY > 20); }
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+      // Fade-in on scroll
+      var items = document.querySelectorAll('.gb-card, .metric-card, .gb-job, .gb-heading');
+      if ('IntersectionObserver' in window && !reduce) {
+         var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('gb-in'); io.unobserve(en.target); } });
+         }, { threshold: 0.12 });
+         items.forEach(function (n) { n.classList.add('gb-reveal'); io.observe(n); });
+      }
+   })();
+   </script>
+</body>
 </html>
