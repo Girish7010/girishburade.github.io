@@ -169,7 +169,6 @@ button { font: inherit; color: inherit; }
 .pb-photo { position: relative; min-height: 340px; }
 .pb-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
 .pb-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 70%, rgba(14, 19, 29, .9)); pointer-events: none; }
-.pb-photo .pill { position: absolute; left: 14px; bottom: 14px; z-index: 1; background: rgba(7, 9, 14, .82); backdrop-filter: blur(6px); }
 .pb-body { display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 34px 38px; min-width: 0; }
 .pb-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
 .pb-head h3 { font-size: clamp(28px, 3.4vw, 42px); font-weight: 800; letter-spacing: -.02em; }
@@ -498,3 +497,32 @@ details .contrib { margin-top: 8px; }
 /* About is the first section on the page */
 .section-first { padding-top: 56px; }
 .section-first + .hero { padding-top: 40px; }
+
+/* Open-to-work callout on the profile photo ------------------------------ */
+@property --otw-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.pb-photo::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: inset 0 0 0 2px rgba(52, 211, 153, .55), inset 0 0 40px rgba(52, 211, 153, .25); animation: otwFrame 3s ease-in-out infinite; }
+@keyframes otwFrame { 50% { box-shadow: inset 0 0 0 2px rgba(52, 211, 153, .9), inset 0 0 70px rgba(52, 211, 153, .4); } }
+.otw {
+   position: absolute; left: 16px; bottom: 16px; z-index: 2; max-width: calc(100% - 32px);
+   display: flex; align-items: center; gap: 12px; padding: 10px 14px 10px 12px;
+   border-radius: 14px; border: 1.5px solid transparent; color: #fff;
+   background:
+      linear-gradient(rgba(6, 14, 12, .88), rgba(6, 14, 12, .88)) padding-box,
+      conic-gradient(from var(--otw-angle), #34d399, #22d3ee, rgba(52, 211, 153, .15) 40%, rgba(52, 211, 153, .15) 60%, #34d399) border-box;
+   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+   animation: otwIn .7s cubic-bezier(.2, .8, .2, 1) .3s both, otwSpin 3.5s linear infinite, otwGlow 2.4s ease-in-out 1s infinite;
+   transition: transform .25s;
+}
+.otw:hover { color: #fff; transform: translateY(-2px); }
+.otw .ic { color: var(--green); transition: transform .25s; }
+.otw:hover .ic { transform: translateX(3px); }
+.otw-dot { position: relative; width: 12px; height: 12px; flex-shrink: 0; border-radius: 50%; background: var(--green); box-shadow: 0 0 10px var(--green); }
+.otw-dot::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid var(--green); animation: ripple 1.6s ease-out infinite; }
+.otw-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.otw-text b { font-size: 15px; letter-spacing: .01em; background: linear-gradient(90deg, #6ee7b7, #a7f3d0, #67e8f9, #6ee7b7); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: otwShine 3s linear infinite; }
+.otw-text small { font-size: 12px; color: var(--muted); }
+@keyframes otwIn { from { opacity: 0; transform: translateY(14px) scale(.96); } }
+@keyframes otwSpin { to { --otw-angle: 360deg; } }
+@keyframes otwGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, .0), 0 8px 24px rgba(0, 0, 0, .45); } 50% { box-shadow: 0 0 22px 2px rgba(52, 211, 153, .45), 0 8px 24px rgba(0, 0, 0, .45); } }
+@keyframes otwShine { to { background-position: -200% 0; } }
+@media (max-width: 680px) { .otw { left: 12px; bottom: 12px; padding: 8px 12px 8px 10px; } }
