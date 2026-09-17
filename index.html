@@ -72,7 +72,7 @@
    <!-- ============ NAVBAR ============ -->
    <header class="nav" id="top">
       <div class="container nav-inner">
-         <a class="brand" href="#home">
+         <a class="brand" href="#about">
             <span class="brand-mark">GB</span>
             <span class="brand-text">girish<span>.burade</span></span>
          </a>
@@ -80,8 +80,8 @@
             <svg class="ic"><use href="#i-menu"/></svg>
          </button>
          <nav id="nav-menu" class="nav-menu" aria-label="Primary">
-            <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#home">Home</a>
             <a href="#infrastructure">Infrastructure</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
@@ -94,93 +94,66 @@
    </header>
 
    <main id="main">
-   <!-- ============ HERO ============ -->
-   <section class="hero" id="home">
-      <div class="container hero-grid">
-         <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot"></span> DevOps &amp; Cloud Engineer · Open to new roles</p>
-            <h1>Building <span class="grad">scalable cloud infrastructure</span>, automated CI/CD pipelines and reliable production systems.</h1>
-            <p class="lead">
-               I'm <strong>Girish Burade</strong> — a Senior DevOps / Cloud Engineer with
-               <strong class="js-exp-years">5+ years</strong> designing, automating and operating production AWS infrastructure.
-            </p>
-            <ul class="tech-badges" aria-label="Core technologies">
-               <li><svg class="ic"><use href="#i-cloud"/></svg>AWS</li>
-               <li><svg class="ic"><use href="#i-layers"/></svg>Terraform</li>
-               <li><svg class="ic"><use href="#i-container"/></svg>Docker</li>
-               <li><svg class="ic"><use href="#i-pipeline"/></svg>CI/CD</li>
-               <li><svg class="ic"><use href="#i-terminal"/></svg>Linux</li>
-               <li><svg class="ic"><use href="#i-monitor"/></svg>CloudWatch</li>
-            </ul>
-            <div class="actions">
-               <a class="btn btn-primary" href="#infrastructure"><svg class="ic"><use href="#i-diagram"/></svg> View Infrastructure</a>
-               <a class="btn btn-outline" href="#projects"><svg class="ic"><use href="#i-code"/></svg> View Projects</a>
-               <a class="btn btn-ghost js-resume-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg> Download Resume</a>
-            </div>
-         </div>
-
-         <!-- Terminal component (animated; accepts a few commands afterwards) -->
-         <div class="terminal reveal" aria-label="Interactive terminal">
-            <div class="terminal-bar">
-               <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
-               <span class="terminal-title">girish@prod: ~</span>
-            </div>
-            <div class="terminal-body" id="terminal" aria-live="polite">
-               <noscript>
-                  <div class="t-line"><span class="t-prompt">$</span> whoami</div>
-                  <div class="t-out">girish-burade · devops &amp; cloud engineer</div>
-               </noscript>
-            </div>
-            <form class="terminal-input" id="terminal-form" hidden autocomplete="off">
-               <label for="terminal-cmd" class="t-prompt">$</label>
-               <input id="terminal-cmd" type="text" spellcheck="false" placeholder="type 'help'" aria-label="Terminal command">
-            </form>
-         </div>
-         <!-- Engineering snapshot (facts only — no invented metrics) -->
-         <div class="snapshot" aria-label="Engineering snapshot">
-            <div class="snapshot-grid">
-               <div class="snap reveal">
-                  <span class="snap-label">Experience</span>
-                  <span class="snap-value js-exp-years">5+ years</span>
-                  <span class="snap-sub">Production AWS since 2020</span>
-               </div>
-               <a class="snap reveal" href="https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile" target="_blank" rel="noopener">
-                  <span class="snap-label">Cloud platform</span>
-                  <span class="snap-value">AWS</span>
-                  <span class="snap-sub">Solutions Architect – Associate <svg class="ic ic-xs"><use href="#i-external"/></svg></span>
-               </a>
-               <div class="snap reveal">
-                  <span class="snap-label">Delivery</span>
-                  <span class="snap-value">CI/CD</span>
-                  <span class="snap-sub">CodeBuild · CodeDeploy · GitLab CI</span>
-               </div>
-               <div class="snap reveal">
-                  <span class="snap-label">Provisioning</span>
-                  <span class="snap-value">IaC</span>
-                  <span class="snap-sub">Terraform · Dev / Staging / Prod</span>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
    <!-- ============ ABOUT ============ -->
-   <section class="section" id="about">
+   <section class="section section-first" id="about">
       <div class="container">
          <header class="section-head">
             <span class="kicker">01 · about</span>
             <h2>Engineer for production, not just for demos.</h2>
          </header>
-         <div class="about-grid">
-            <aside class="profile-card reveal">
-               <img src="images/girish-profile.jpg" alt="Girish Burade" width="400" height="400" loading="lazy" decoding="async">
-               <dl class="facts">
-                  <div><dt>role</dt><dd>Senior DevOps / Cloud Engineer</dd></div>
-                  <div><dt>experience</dt><dd class="js-exp-exact">5+ years</dd></div>
-                  <div><dt>cloud</dt><dd>AWS Certified Solutions Architect – Associate</dd></div>
-                  <div><dt>also</dt><dd>AWS Cloud Practitioner · CCNA</dd></div>
-               </dl>
-            </aside>
+         <!-- Profile banner -->
+         <div class="profile-banner">
+            <div class="pb-photo">
+               <img src="images/girish-profile.jpg" alt="Girish Burade" width="800" height="800" fetchpriority="high" decoding="async">
+               <span class="pill pill-live"><span class="status-dot"></span> open to roles</span>
+            </div>
+            <div class="pb-body">
+               <div class="pb-head">
+                  <div>
+                     <h3>Girish Burade</h3>
+                     <p class="pb-role">Senior DevOps / Cloud Engineer</p>
+                  </div>
+                  <div class="pb-exp">
+                     <span class="pb-exp-value js-exp-years">5+ years</span>
+                     <span class="pb-exp-label">experience · <span class="js-exp-exact">5+ years</span></span>
+                  </div>
+               </div>
+               <ul class="certs" aria-label="Certifications">
+                  <li>
+                     <a class="cert cert-primary" href="https://www.credly.com/badges/11ab95a6-c51d-4a55-9c28-33c7fc6a25ae/linked_in_profile" target="_blank" rel="noopener">
+                        <img src="images/aws-ar.jpg" alt="AWS Certified Solutions Architect – Associate badge" width="96" height="96">
+                        <span class="cert-text">
+                           <small>AWS Certified</small>
+                           <b>Solutions Architect – Associate</b>
+                           <em>Verify on Credly <svg class="ic ic-xs"><use href="#i-external"/></svg></em>
+                        </span>
+                     </a>
+                  </li>
+                  <li>
+                     <div class="cert">
+                        <span class="cert-icon"><svg class="ic ic-lg"><use href="#i-cloud"/></svg></span>
+                        <span class="cert-text">
+                           <small>AWS Certified</small>
+                           <b>Cloud Practitioner</b>
+                           <em>Foundational</em>
+                        </span>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="cert">
+                        <span class="cert-icon"><svg class="ic ic-lg"><use href="#i-network"/></svg></span>
+                        <span class="cert-text">
+                           <small>Cisco Certified</small>
+                           <b>CCNA</b>
+                           <em>Network Associate</em>
+                        </span>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <div>
             <div class="about-body reveal">
                <p class="about-lead">
                   I design, automate and operate <strong>production AWS infrastructure</strong>. My day-to-day spans
@@ -204,6 +177,41 @@
       </div>
    </section>
 
+   <!-- ============ HERO ============ -->
+   <section class="hero" id="home">
+      <div class="container hero-grid">
+         <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> DevOps &amp; Cloud Engineer</p>
+            <h1>Building <span class="grad">scalable cloud infrastructure</span>, automated CI/CD pipelines and reliable production systems.</h1>
+            <p class="lead">
+               I'm <strong>Girish Burade</strong> — a Senior DevOps / Cloud Engineer with
+               <strong class="js-exp-years">5+ years</strong> designing, automating and operating production AWS infrastructure.
+            </p>
+            <ul class="tech-badges" aria-label="Core technologies">
+               <li><svg class="ic"><use href="#i-cloud"/></svg>AWS</li>
+               <li><svg class="ic"><use href="#i-layers"/></svg>Terraform</li>
+               <li><svg class="ic"><use href="#i-container"/></svg>Docker</li>
+               <li><svg class="ic"><use href="#i-pipeline"/></svg>CI/CD</li>
+               <li><svg class="ic"><use href="#i-terminal"/></svg>Linux</li>
+               <li><svg class="ic"><use href="#i-monitor"/></svg>CloudWatch</li>
+            </ul>
+            <div class="actions">
+               <a class="btn btn-primary" href="#infrastructure"><svg class="ic"><use href="#i-diagram"/></svg> View Infrastructure</a>
+               <a class="btn btn-outline" href="#projects"><svg class="ic"><use href="#i-code"/></svg> View Projects</a>
+               <a class="btn btn-ghost js-resume-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg> Download Resume</a>
+            </div>
+         </div>
+
+         <!-- Capability tiles (facts only — no invented metrics) -->
+         <div class="hero-tiles" aria-label="Core capabilities">
+            <div class="tile reveal"><svg class="ic ic-lg"><use href="#i-pipeline"/></svg><span class="tile-label">delivery</span><b>CI/CD</b><span>CodeBuild · CodeDeploy · GitLab CI</span></div>
+            <div class="tile reveal"><svg class="ic ic-lg"><use href="#i-layers"/></svg><span class="tile-label">provisioning</span><b>IaC</b><span>Terraform · Dev / Staging / Prod</span></div>
+            <div class="tile reveal"><svg class="ic ic-lg"><use href="#i-container"/></svg><span class="tile-label">runtime</span><b>Containers</b><span>Docker · Compose · ECS / ECR</span></div>
+            <div class="tile reveal"><svg class="ic ic-lg"><use href="#i-monitor"/></svg><span class="tile-label">observability</span><b>Monitoring</b><span>CloudWatch · SNS · Uptime Kuma</span></div>
+         </div>
+      </div>
+   </section>
+
    <!-- ============ INFRASTRUCTURE ============ -->
    <section class="section section-alt" id="infrastructure">
       <div class="container">
@@ -222,6 +230,8 @@
                </div>
                <span class="pill mono">AWS deployment flow · reference architecture</span>
             </div>
+            <div class="pipeline-wrap">
+               <div class="pipeline-rail" aria-hidden="true"><span class="rail-fill"></span><span class="rail-packet"></span></div>
             <ol class="pipeline" aria-label="CI/CD pipeline stages — hover, focus or tap a stage to inspect it">
                <li class="stage" tabindex="0" data-tech="Git"><svg class="ic"><use href="#i-code"/></svg><span class="stage-name">Code</span><span class="stage-desc"><b>Git</b> Changes are committed and pushed to version control.</span></li>
                <li class="stage" tabindex="0" data-tech="GitHub · GitLab"><svg class="ic"><use href="#i-git"/></svg><span class="stage-name">Repo</span><span class="stage-desc"><b>GitHub · GitLab</b> A push to the main branch triggers the pipeline automatically.</span></li>
@@ -234,6 +244,7 @@
                <li class="stage" tabindex="0" data-tech="Health checks"><svg class="ic"><use href="#i-heart"/></svg><span class="stage-name">Health</span><span class="stage-desc"><b>Health checks</b> Health checks confirm the new release is serving correctly.</span></li>
                <li class="stage" tabindex="0" data-tech="CloudWatch · SNS · Uptime Kuma"><svg class="ic"><use href="#i-monitor"/></svg><span class="stage-name">Monitor</span><span class="stage-desc"><b>CloudWatch · SNS · Uptime Kuma</b> Metrics, logs and alarms notify the team before users notice.</span></li>
             </ol>
+            </div>
             <div class="stage-panel" aria-live="polite">
                <span class="mono dim">stage</span>
                <b id="stage-title">Code</b>
@@ -277,57 +288,69 @@
             <h2>DevOps skill matrix.</h2>
             <p>Grouped around the technologies and practices used to build, deploy and operate production systems.</p>
          </header>
-         <div class="matrix">
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-cloud"/></svg><h3>Cloud · AWS</h3></header>
+         <div class="skills reveal">
+            <div class="skill-tabs" role="tablist" aria-label="Skill categories">
+               <button class="skill-tab" type="button" role="tab" id="sk-0-tab" aria-controls="sk-0" aria-selected="true"><svg class="ic"><use href="#i-cloud"/></svg><span>Cloud · AWS</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-1-tab" aria-controls="sk-1" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-layers"/></svg><span>Infrastructure as Code</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-2-tab" aria-controls="sk-2" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-container"/></svg><span>Containers</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-3-tab" aria-controls="sk-3" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-pipeline"/></svg><span>CI/CD</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-4-tab" aria-controls="sk-4" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-monitor"/></svg><span>Monitoring &amp; Reliability</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-5-tab" aria-controls="sk-5" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-shield"/></svg><span>Security &amp; Compliance</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-6-tab" aria-controls="sk-6" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-network"/></svg><span>Networking</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-7-tab" aria-controls="sk-7" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-terminal"/></svg><span>OS &amp; Scripting</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-8-tab" aria-controls="sk-8" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-cost"/></svg><span>FinOps</span></button>
+               <button class="skill-tab" type="button" role="tab" id="sk-9-tab" aria-controls="sk-9" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-db"/></svg><span>Databases</span></button>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-0" aria-labelledby="sk-0-tab">
+               <h3>Cloud · AWS</h3>
                <ul class="chips"><li>EC2</li><li>VPC</li><li>S3</li><li>IAM</li><li>ALB / ELB</li><li>Auto Scaling</li><li>Launch Templates</li><li>ECS</li><li>ECR</li><li>Lambda</li><li>Secrets Manager</li><li>AWS Config</li><li>SNS</li><li>AWS CLI</li></ul>
-               <footer>used at · Quralyst AI · Thinkbiz · Genericure</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-layers"/></svg><h3>Infrastructure as Code</h3></header>
+               <p class="skill-used">used at · Quralyst AI · Thinkbiz · Genericure</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-1" aria-labelledby="sk-1-tab" hidden>
+               <h3>Infrastructure as Code</h3>
                <ul class="chips"><li class="hot">Terraform</li><li>Multi-environment</li><li>Dev · Staging · Prod</li></ul>
-               <footer>used at · Thinkbiz</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-container"/></svg><h3>Containers</h3></header>
+               <p class="skill-used">used at · Thinkbiz</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-2" aria-labelledby="sk-2-tab" hidden>
+               <h3>Containers</h3>
                <ul class="chips"><li class="hot">Docker</li><li>Docker Compose</li><li>Amazon ECS</li><li>Amazon ECR</li><li>Container logging</li></ul>
-               <footer>used at · Quralyst AI · Thinkbiz</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-pipeline"/></svg><h3>CI/CD</h3></header>
+               <p class="skill-used">used at · Quralyst AI · Thinkbiz</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-3" aria-labelledby="sk-3-tab" hidden>
+               <h3>CI/CD</h3>
                <ul class="chips"><li>AWS CodePipeline</li><li class="hot">AWS CodeBuild</li><li class="hot">AWS CodeDeploy</li><li>GitHub Actions</li><li class="hot">GitLab CI/CD</li><li>Git</li><li>Rollback handling</li></ul>
-               <footer>used at · Quralyst AI · Thinkbiz</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-monitor"/></svg><h3>Monitoring &amp; Reliability</h3></header>
+               <p class="skill-used">used at · Quralyst AI · Thinkbiz</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-4" aria-labelledby="sk-4-tab" hidden>
+               <h3>Monitoring &amp; Reliability</h3>
                <ul class="chips"><li class="hot">CloudWatch</li><li>Logs &amp; dashboards</li><li>Alarms</li><li>SNS alerting</li><li>Health checks</li><li>Uptime Kuma</li><li>MS Teams alerts</li><li>Disaster recovery</li></ul>
-               <footer>used at · Quralyst AI · Thinkbiz · Genericure</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-shield"/></svg><h3>Security &amp; Compliance</h3></header>
+               <p class="skill-used">used at · Quralyst AI · Thinkbiz · Genericure</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-5" aria-labelledby="sk-5-tab" hidden>
+               <h3>Security &amp; Compliance</h3>
                <ul class="chips"><li>IAM least privilege</li><li>Secrets Manager</li><li>KMS encryption</li><li>AWS Config</li><li>Vulnerability checks</li><li>Audit trails</li></ul>
-               <footer>used at · Quralyst AI · Thinkbiz</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-network"/></svg><h3>Networking</h3></header>
+               <p class="skill-used">used at · Quralyst AI · Thinkbiz</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-6" aria-labelledby="sk-6-tab" hidden>
+               <h3>Networking</h3>
                <ul class="chips"><li>Subnets &amp; route tables</li><li>Security groups</li><li>Load balancing</li><li>Nginx reverse proxy</li><li>SSL/TLS</li><li>DNS &amp; domains</li><li>SMTP</li></ul>
-               <footer>used at · Quralyst AI</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-terminal"/></svg><h3>OS &amp; Scripting</h3></header>
+               <p class="skill-used">used at · Quralyst AI</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-7" aria-labelledby="sk-7-tab" hidden>
+               <h3>OS &amp; Scripting</h3>
                <ul class="chips"><li class="hot">Linux / Unix</li><li>Bash</li><li>Shell scripting</li><li>Python</li></ul>
-               <footer>used at · Thinkbiz · Genericure</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-cost"/></svg><h3>FinOps</h3></header>
+               <p class="skill-used">used at · Thinkbiz · Genericure</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-8" aria-labelledby="sk-8-tab" hidden>
+               <h3>FinOps</h3>
                <ul class="chips"><li>AWS Budgets</li><li>Cost Explorer</li><li>Cost anomaly detection</li><li>Right-sizing</li></ul>
-               <footer>used at · Thinkbiz · Genericure</footer>
-            </article>
-            <article class="mx reveal">
-               <header><svg class="ic"><use href="#i-db"/></svg><h3>Databases</h3></header>
+               <p class="skill-used">used at · Thinkbiz · Genericure</p>
+            </div>
+            <div class="skill-panel" role="tabpanel" id="sk-9" aria-labelledby="sk-9-tab" hidden>
+               <h3>Databases</h3>
                <ul class="chips"><li>Amazon RDS</li><li>Aurora</li><li>Migrations</li><li>Version upgrades</li></ul>
-               <footer>used at · Thinkbiz</footer>
-            </article>
+               <p class="skill-used">used at · Thinkbiz</p>
+            </div>
          </div>
       </div>
    </section>
@@ -341,124 +364,65 @@
             <p>Real engineering work — source on <a href="https://github.com/Girish7010" target="_blank" rel="noopener">GitHub</a>, write-ups on <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener">Medium</a>.</p>
          </header>
 
-         <div class="projects">
-            <!-- Quralyst AI (details from CV; source is private) -->
-            <article class="project reveal">
-               <header class="project-head">
-                  <div>
-                     <span class="mono accent">production · current role</span>
-                     <h3>Quralyst AI Platform</h3>
-                     <p class="project-sub">AI-driven deal-sourcing platform by Indago Research, running as isolated containers on AWS.</p>
-                  </div>
-                  <span class="pill">private codebase</span>
-               </header>
-               <dl class="spec">
-                  <div><dt>DevOps contribution</dt><dd>Built and operate the production infrastructure; automated frontend and backend releases end to end, removed hard-coded secrets and isolated browser-based scraping into its own worker.</dd></div>
-                  <div><dt>Infrastructure</dt><dd><ul class="tags"><li>EC2</li><li>Nginx · SSL/TLS</li><li>Docker Compose</li><li>Redis</li><li>Secrets Manager</li></ul></dd></div>
-                  <div><dt>CI/CD</dt><dd><ul class="tags"><li>CodeBuild</li><li>Amazon ECR</li><li>CodeDeploy</li></ul></dd></div>
-                  <div><dt>Technologies</dt><dd><ul class="tags"><li>Docker</li><li>Playwright worker</li><li>CloudWatch</li><li>SNS</li></ul></dd></div>
-               </dl>
-               <ul class="highlights">
-                  <li><svg class="ic"><use href="#i-check"/></svg>Automated deployments</li>
-                  <li><svg class="ic"><use href="#i-check"/></svg>Containerized frontend / backend</li>
-                  <li><svg class="ic"><use href="#i-check"/></svg>No hard-coded secrets</li>
-                  <li><svg class="ic"><use href="#i-check"/></svg>SSL/TLS termination</li>
-                  <li><svg class="ic"><use href="#i-check"/></svg>Isolated scraper worker</li>
-                  <li><svg class="ic"><use href="#i-check"/></svg>Production alerting</li>
-               </ul>
+         <div class="pgrid">
+            <article class="pcard reveal pcard-featured">
+               <span class="mono accent">production · current role</span>
+               <h3>Quralyst AI Platform</h3>
+               <p>Production AWS for an AI-driven deal-sourcing platform (Indago Research): containerized services, automated releases, TLS, managed secrets and alerting.</p>
+               <ul class="tags"><li>EC2</li><li>Docker Compose</li><li>Nginx</li><li>CodeBuild</li><li>CodeDeploy</li><li>ECR</li><li>CloudWatch</li></ul>
                <footer class="project-actions">
                   <button class="btn btn-outline btn-sm" type="button" data-arch="quralyst"><svg class="ic"><use href="#i-diagram"/></svg> Architecture</button>
                   <a class="btn btn-ghost btn-sm" href="https://quralyst.ai/" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Live site</a>
                </footer>
             </article>
-
-            <!-- ECS project -->
-            <article class="project reveal">
-               <header class="project-head">
-                  <div>
-                     <span class="mono accent">aws · containers</span>
-                     <h3>Scalable Web Application on AWS ECS + EC2</h3>
-                     <p class="project-sub">Production-ready Flask app with blue-green deployments, auto-scaling and PostgreSQL on RDS.</p>
-                  </div>
-               </header>
-               <dl class="spec">
-                  <div><dt>DevOps contribution</dt><dd>Zero-downtime blue-green releases on ECS with Multi-AZ availability, provisioned as code and secured with IAM, private subnets and Secrets Manager.</dd></div>
-                  <div><dt>Infrastructure</dt><dd><ul class="tags"><li>ECS (EC2)</li><li>ALB</li><li>RDS PostgreSQL</li><li>Auto Scaling</li><li>Multi-AZ</li></ul></dd></div>
-                  <div><dt>CI/CD</dt><dd><ul class="tags"><li>Terraform</li><li>Docker</li><li>Blue-green deploy</li></ul></dd></div>
-                  <div><dt>Technologies</dt><dd><ul class="tags"><li>Flask</li><li>IAM</li><li>Secrets Manager</li><li>CloudWatch</li></ul></dd></div>
-               </dl>
+            <article class="pcard reveal">
+               <span class="mono accent">aws · containers</span>
+               <h3>Scalable Web App on ECS + EC2</h3>
+               <p>Flask app with zero-downtime blue-green releases, auto-scaling, Multi-AZ and PostgreSQL on RDS — provisioned with Terraform.</p>
+               <ul class="tags"><li>ECS</li><li>ALB</li><li>RDS</li><li>Terraform</li><li>Docker</li></ul>
                <footer class="project-actions">
-                  <!-- NOTE: repo name says Kubernetes while the project is ECS — rename the repo or update this link -->
+                  <!-- NOTE: repo name says Kubernetes while the project is ECS -->
                   <a class="btn btn-primary btn-sm" href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
                   <button class="btn btn-outline btn-sm" type="button" data-arch="ecs"><svg class="ic"><use href="#i-diagram"/></svg> Architecture</button>
                </footer>
             </article>
-
-            <!-- Uptime Kuma -->
-            <article class="project reveal">
-               <header class="project-head">
-                  <div>
-                     <span class="mono accent">observability</span>
-                     <h3>Real-Time Monitoring &amp; Alerting</h3>
-                     <p class="project-sub">Uptime Kuma monitoring critical services across Dev, Staging and Production.</p>
-                  </div>
-               </header>
-               <dl class="spec">
-                  <div><dt>DevOps contribution</dt><dd>Real-time service health visibility with instant alerts for faster incident response.</dd></div>
-                  <div><dt>Infrastructure</dt><dd><ul class="tags"><li>Uptime Kuma</li><li>Dev · Staging · Prod</li></ul></dd></div>
-                  <div><dt>Alerting</dt><dd><ul class="tags"><li>Microsoft Teams</li><li>Mobile call notifications</li></ul></dd></div>
-                  <div><dt>Technologies</dt><dd><ul class="tags"><li>Monitoring</li><li>Alerting</li></ul></dd></div>
-               </dl>
+            <article class="pcard reveal">
+               <span class="mono accent">observability</span>
+               <h3>Monitoring &amp; Alerting</h3>
+               <p>Uptime Kuma checks critical services across Dev, Staging and Production, with Microsoft Teams and mobile call alerts.</p>
+               <ul class="tags"><li>Uptime Kuma</li><li>MS Teams</li><li>Alerting</li></ul>
                <footer class="project-actions">
                   <a class="btn btn-primary btn-sm" href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
                   <button class="btn btn-outline btn-sm" type="button" data-arch="kuma"><svg class="ic"><use href="#i-diagram"/></svg> Architecture</button>
                </footer>
             </article>
-
-            <!-- Compact projects -->
-            <div class="project-mini-grid">
-               <article class="project-mini reveal">
-                  <img src="images/1_KL-uMnZnNP-AYTuHzLDBGg.png" alt="DevOps security best practice diagram" width="640" height="360" loading="lazy" decoding="async">
-                  <div>
-                     <span class="mono accent">devsecops</span>
-                     <h3>Security Check Automation</h3>
-                     <p>Automatic security checks in the DevOps pipeline scan code and containers before deployment — catching issues early and making releases more secure.</p>
-                     <ul class="tags"><li>DevSecOps</li><li>CI/CD</li><li>Containers</li></ul>
-                     <!-- Source currently points to the GitHub profile (no dedicated repo link yet) -->
-                     <a class="btn btn-primary btn-sm mini-src" href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
-                  </div>
-               </article>
-               <article class="project-mini reveal">
-                  <img src="images/aws-best-practices.jpg" alt="AWS best practices diagram" width="640" height="360" loading="lazy" decoding="async">
-                  <div>
-                     <span class="mono accent">aws · governance</span>
-                     <h3>AWS Best Practices Across Projects</h3>
-                     <p>IAM roles and policies with least privilege, credentials managed through Secrets Manager, and resources provisioned with Terraform for repeatable deployments.</p>
-                     <ul class="tags"><li>IAM</li><li>Secrets Manager</li><li>Terraform</li></ul>
-                     <!-- Source currently points to the GitHub profile (no dedicated repo link yet) -->
-                     <a class="btn btn-primary btn-sm mini-src" href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
-                  </div>
-               </article>
-            </div>
-            <!-- Engineering activity -->
-            <div class="activity reveal">
-               <div class="activity-head">
-                  <svg class="ic ic-lg"><use href="#i-github"/></svg>
-                  <div>
-                     <h3>Engineering activity</h3>
-                     <span class="mono dim">github.com/Girish7010</span>
-                  </div>
-               </div>
-               <ul class="repo-list">
-                  <li><a href="https://github.com/Girish7010/Monitoring-Tool-Uptime-Kuma" target="_blank" rel="noopener"><svg class="ic"><use href="#i-registry"/></svg><span>Monitoring-Tool-Uptime-Kuma</span><em>monitoring</em></a></li>
-                  <li><a href="https://github.com/Girish7010/Running-Tracker-App-Kubernetes-Deployment" target="_blank" rel="noopener"><svg class="ic"><use href="#i-registry"/></svg><span>Running-Tracker-App-Kubernetes-Deployment</span><em>deployment</em></a></li>
-                  <li><a href="https://github.com/Girish7010/girishburade.github.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-registry"/></svg><span>girishburade.github.io</span><em>this site</em></a></li>
-               </ul>
-               <div class="activity-actions">
-                  <a class="btn btn-outline btn-sm" href="https://github.com/Girish7010?tab=repositories" target="_blank" rel="noopener">All repositories <svg class="ic ic-xs"><use href="#i-external"/></svg></a>
+            <article class="pcard reveal">
+               <span class="mono accent">devsecops</span>
+               <h3>Security Check Automation</h3>
+               <p>Automatic security checks in the pipeline scan code and containers before deployment.</p>
+               <ul class="tags"><li>DevSecOps</li><li>CI/CD</li><li>Containers</li></ul>
+               <footer class="project-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
+               </footer>
+            </article>
+            <article class="pcard reveal">
+               <span class="mono accent">aws · governance</span>
+               <h3>AWS Best Practices</h3>
+               <p>Least-privilege IAM, credentials in Secrets Manager, and Terraform-provisioned resources for repeatable deployments.</p>
+               <ul class="tags"><li>IAM</li><li>Secrets Manager</li><li>Terraform</li></ul>
+               <footer class="project-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic ic-xs"><use href="#i-external"/></svg> Source</a>
+               </footer>
+            </article>
+            <article class="pcard pcard-more reveal">
+               <span class="mono accent">github.com/Girish7010</span>
+               <h3>More on GitHub &amp; Medium</h3>
+               <p>Repositories, infrastructure experiments and write-ups.</p>
+               <footer class="project-actions">
+                  <a class="btn btn-outline btn-sm" href="https://github.com/Girish7010?tab=repositories" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg> Repositories</a>
                   <a class="btn btn-ghost btn-sm" href="https://medium.com/@girishburade30792" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pen"/></svg> Blog</a>
-               </div>
-            </div>
+               </footer>
+            </article>
          </div>
       </div>
    </section>
@@ -564,14 +528,14 @@
 <span class="t-prompt">&gt;</span> Let's connect.<span class="cursor" aria-hidden="true"></span></pre>
             </div>
             <ul class="contact-list">
-               <li class="contact-item">
+               <li class="contact-item contact-wide">
                   <a href="mailto:girishburade@gmail.com"><svg class="ic"><use href="#i-mail"/></svg><span><small>email</small>girishburade@gmail.com</span></a>
                   <button class="copy-btn" type="button" data-copy="girishburade@gmail.com" aria-label="Copy email address">Copy</button>
                </li>
                <li class="contact-item"><a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg><span><small>linkedin</small>in/girish-burade</span></a></li>
                <li class="contact-item"><a href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg><span><small>github</small>Girish7010</span></a></li>
                <li class="contact-item js-resume-item"><a class="js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg><span><small>resume</small>Download PDF</span></a></li>
-               <li class="contact-item">
+               <li class="contact-item contact-wide">
                   <a href="tel:+918668846084"><svg class="ic"><use href="#i-phone"/></svg><span><small>phone</small>+91 86688 46084</span></a>
                   <button class="copy-btn" type="button" data-copy="+918668846084" aria-label="Copy phone number">Copy</button>
                </li>

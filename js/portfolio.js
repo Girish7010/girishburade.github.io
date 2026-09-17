@@ -284,18 +284,45 @@
          pTech.textContent = st.dataset.tech;
          pText.textContent = desc.textContent.replace($('b', desc).textContent, '').trim();
       };
-      var activate = function (i) {
+      var wrap = pipeline.parentNode;
+      var last = -1;
+      stages.forEach(function (s) {
+         var bar = document.createElement('span');
+         bar.className = 'stage-bar';
+         bar.setAttribute('aria-hidden', 'true');
+         s.appendChild(bar);
+      });
+      // move the glowing packet along the rail to the centre of stage i
+      var movePacket = function (i) {
+         var st = stages[i];
+         var x = st.offsetLeft + st.offsetWidth / 2;
+         var jumpBack = i < last;
+         wrap.classList.toggle('rail-reset', jumpBack);
+         if (jumpBack) void wrap.offsetWidth;   // apply the no-transition state first
+         wrap.style.setProperty('--x', x + 'px');
+         wrap.style.setProperty('--p', stages.length > 1 ? i / (stages.length - 1) : 1);
+      };
+      var activate = function (i, auto) {
          stages.forEach(function (s, j) {
             s.classList.toggle('done', j < i);
             s.classList.toggle('active', j === i);
+            s.classList.toggle('auto', j === i && !!auto);
             s.setAttribute('aria-current', j === i ? 'step' : 'false');
+            if (j === i - 1 && i > last && last === j) {
+               s.classList.remove('just-done');
+               void s.offsetWidth;
+               s.classList.add('just-done');
+            }
          });
+         movePacket(i);
+         last = i;
          showStage(i);
       };
+      window.addEventListener('resize', function () { if (last > -1) movePacket(last); });
       var tick = function () {
          timer = null;
          if (!visible || hovering || pinned > -1 || document.hidden) return;
-         activate(step);
+         activate(step, true);
          step = (step + 1) % stages.length;
          timer = setTimeout(tick, step === 0 ? 3200 : 1500);
       };
@@ -336,7 +363,12 @@
       Copy-to-clipboard buttons (contact section)
       --------------------------------------------------------------------- */
    function copyText(text) {
-      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+      if (navigator.clipboard && window.isSecureContext) {
+         return navigator.clipboard.writeText(text).catch(function () { return legacyCopy(text); });
+      }
+      return legacyCopy(text);
+   }
+   function legacyCopy(text) {
       return new Promise(function (resolve, reject) {
          var ta = document.createElement('textarea');
          ta.value = text;
@@ -369,107 +401,27 @@
    });
 
    /* ---------------------------------------------------------------------
-      Terminal — typed intro, then a few real commands
+      Skills — one panel, pick a category
       --------------------------------------------------------------------- */
-   var term = $('#terminal'), form = $('#terminal-form'), input = $('#terminal-cmd');
-   if (term) {
-      var PROMPT = '<span class="t-prompt">$</span>';
-      var intro = [
-         ['whoami', 'girish-burade <span class="dim">·</span> <b>senior devops / cloud engineer</b>'],
-         ['cloud --provider', '<b>AWS</b> <span class="dim">· Certified Solutions Architect – Associate</span>'],
-         ['infrastructure --as-code', '<b>Terraform</b> <span class="dim">· dev / staging / prod</span>'],
-         ['container --runtime', '<b>Docker</b> · Docker Compose · Amazon ECS'],
-         ['monitoring --stack', 'CloudWatch · SNS · Uptime Kuma'],
-         ['pipeline --stages', 'code → build → test → image → ecr → deploy → <span class="t-ok">monitor</span>']
-      ];
-      var COMMANDS = {
-         help: function () {
-            return 'available: <b>whoami</b> · <b>experience</b> · <b>skills</b> · <b>projects</b> · <b>contact</b> · <b>resume</b> · <b>clear</b>';
-         },
-         whoami: function () { return intro[0][1]; },
-         experience: function () {
-            return '<b>' + esc(expExact) + '</b> in cloud &amp; devops<br>' +
-               '<span class="t-ok">●</span> Quralyst AI <span class="dim">(Oct 2025 – present)</span><br>' +
-               '○ Thinkbiz Technology <span class="dim">(Feb 2022 – Jul 2025)</span><br>' +
-               '○ Genericure <span class="dim">(Jan 2020 – Nov 2020)</span>';
-         },
-         skills: function () {
-            return 'aws  terraform  docker  ecs  ecr  codebuild  codedeploy  gitlab-ci  github-actions  cloudwatch  linux  bash  python';
-         },
-         projects: function () {
-            setTimeout(function () { location.hash = '#projects'; }, 600);
-            return 'quralyst-platform/  ecs-web-app/  uptime-kuma-monitoring/<br><span class="dim">→ opening #projects</span>';
-         },
-         contact: function () {
-            return '<a href="mailto:girishburade@gmail.com">girishburade@gmail.com</a> · <a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener">linkedin</a> · <a href="https://github.com/Girish7010" target="_blank" rel="noopener">github</a>';
-         },
-         resume: function () {
-            var link = $('.js-resume-link');
-            if (!link || link.closest('[hidden]') || link.hidden) return '<span class="t-warn">resume not available right now</span>';
-            link.click();
-            return '<span class="t-ok">✓</span> downloading resume.pdf';
-         }
-      };
-      COMMANDS.ls = COMMANDS.projects;
-
-      var addLine = function (html, cls) {
-         var d = document.createElement('div');
-         d.className = cls;
-         d.innerHTML = html;
-         term.appendChild(d);
-         term.scrollTop = term.scrollHeight;
-         return d;
-      };
-      var typeCommand = function (cmd, done) {
-         var line = addLine(PROMPT, 't-line'), k = 0;
-         var text = document.createTextNode('');
-         var caret = document.createElement('span');
-         caret.className = 'cursor';
-         line.appendChild(text);
-         line.appendChild(caret);
-         (function next() {
-            if (k <= cmd.length) {
-               text.nodeValue = cmd.slice(0, k++);
-               setTimeout(next, 38 + Math.random() * 45);
-            } else {
-               caret.remove();
-               setTimeout(done, 220);
-            }
-         })();
-      };
-      var finishIntro = function () {
-         addLine('<span class="dim">type <b>help</b> to explore</span>', 't-out');
-         form.hidden = false;
-      };
-
-      if (reduceMotion) {
-         intro.forEach(function (row) {
-            addLine(PROMPT + esc(row[0]), 't-line');
-            addLine(row[1], 't-out');
-         });
-         finishIntro();
-      } else {
-         var n = 0;
-         (function run() {
-            if (n >= intro.length) return finishIntro();
-            var row = intro[n++];
-            typeCommand(row[0], function () {
-               addLine(row[1], 't-out');
-               setTimeout(run, 260);
-            });
-         })();
-      }
-
-      form.addEventListener('submit', function (e) {
-         e.preventDefault();
-         var raw = input.value.trim();
-         input.value = '';
-         if (!raw) return;
-         var cmd = raw.toLowerCase().split(/\s+/)[0];
-         if (cmd === 'clear') { term.innerHTML = ''; return; }
-         addLine(PROMPT + esc(raw), 't-line');
-         var fn = COMMANDS[cmd];
-         addLine(fn ? fn() : 'command not found: ' + esc(cmd) + ' <span class="dim">— try <b>help</b></span>', 't-out');
+   var skillTabs = $$('.skill-tab');
+   function selectSkill(tab, focus) {
+      skillTabs.forEach(function (t) {
+         var on = t === tab;
+         t.setAttribute('aria-selected', String(on));
+         t.tabIndex = on ? 0 : -1;
+         $('#' + t.getAttribute('aria-controls')).hidden = !on;
       });
+      if (focus) tab.focus();
    }
+   skillTabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { selectSkill(tab); });
+      tab.addEventListener('keydown', function (e) {
+         var n = skillTabs.length, k = -1;
+         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') k = (i + 1) % n;
+         if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') k = (i - 1 + n) % n;
+         if (e.key === 'Home') k = 0;
+         if (e.key === 'End') k = n - 1;
+         if (k > -1) { e.preventDefault(); selectSkill(skillTabs[k], true); }
+      });
+   });
 })();
