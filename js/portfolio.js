@@ -401,27 +401,44 @@
    });
 
    /* ---------------------------------------------------------------------
-      Skills — one panel, pick a category
+      Copy-to-clipboard buttons (contact section)
       --------------------------------------------------------------------- */
-   var skillTabs = $$('.skill-tab');
-   function selectSkill(tab, focus) {
-      skillTabs.forEach(function (t) {
-         var on = t === tab;
-         t.setAttribute('aria-selected', String(on));
-         t.tabIndex = on ? 0 : -1;
-         $('#' + t.getAttribute('aria-controls')).hidden = !on;
-      });
-      if (focus) tab.focus();
+   function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+         return navigator.clipboard.writeText(text).catch(function () { return legacyCopy(text); });
+      }
+      return legacyCopy(text);
    }
-   skillTabs.forEach(function (tab, i) {
-      tab.addEventListener('click', function () { selectSkill(tab); });
-      tab.addEventListener('keydown', function (e) {
-         var n = skillTabs.length, k = -1;
-         if (e.key === 'ArrowRight' || e.key === 'ArrowDown') k = (i + 1) % n;
-         if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') k = (i - 1 + n) % n;
-         if (e.key === 'Home') k = 0;
-         if (e.key === 'End') k = n - 1;
-         if (k > -1) { e.preventDefault(); selectSkill(skillTabs[k], true); }
+   function legacyCopy(text) {
+      return new Promise(function (resolve, reject) {
+         var ta = document.createElement('textarea');
+         ta.value = text;
+         ta.setAttribute('readonly', '');
+         ta.style.position = 'fixed';
+         ta.style.opacity = '0';
+         document.body.appendChild(ta);
+         ta.select();
+         ta.setSelectionRange(0, text.length);
+         var ok = false;
+         try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+         ta.remove();
+         if (ok) resolve(); else reject(new Error('copy failed'));
+      });
+   }
+   $$('.copy-btn').forEach(function (btn) {
+      var label = btn.textContent;
+      var reset;
+      btn.addEventListener('click', function () {
+         copyText(btn.dataset.copy).then(function () {
+            btn.textContent = '✓ Copied';
+            btn.classList.add('copied');
+         }, function () {
+            btn.textContent = 'Press Ctrl+C';
+         }).then(function () {
+            clearTimeout(reset);
+            reset = setTimeout(function () { btn.textContent = label; btn.classList.remove('copied'); }, 1800);
+         });
       });
    });
+
 })();

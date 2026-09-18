@@ -303,24 +303,6 @@ button { font: inherit; color: inherit; }
 .stage-panel b { font-size: 17px; color: #fff; }
 .stage-panel p { grid-column: 1 / -1; color: var(--muted); font-size: 15px; }
 
-/* Skills (tabbed) -------------------------------------------------------- */
-.skills { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 0; border-radius: var(--radius); border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
-.skill-tabs { display: flex; flex-direction: column; padding: 10px; gap: 2px; border-right: 1px solid var(--border); background: rgba(0, 0, 0, .18); }
-.skill-tab { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--muted); font-size: 14.5px; text-align: left; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
-.skill-tab .ic { color: var(--dim); transition: color .2s; }
-.skill-tab:hover { color: #fff; background: rgba(255, 255, 255, .03); }
-.skill-tab[aria-selected="true"] { color: #fff; background: rgba(34, 211, 238, .08); border-color: rgba(34, 211, 238, .35); }
-.skill-tab[aria-selected="true"] .ic { color: var(--cyan); }
-.skill-panel { padding: 28px 30px; animation: fadeIn .3s ease; }
-.skill-panel[hidden] { display: none; }
-.skill-panel h3 { font-size: 20px; margin-bottom: 18px; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chips li { font-size: 14px; padding: 7px 13px; border-radius: 8px; color: var(--text); background: rgba(255, 255, 255, .03); border: 1px solid var(--border); transition: border-color .2s, color .2s, background .2s; }
-.chips li:hover { border-color: rgba(34, 211, 238, .5); color: #fff; background: rgba(34, 211, 238, .06); }
-.chips li.hot { border-color: rgba(34, 211, 238, .4); color: #cffafe; background: rgba(34, 211, 238, .08); }
-.skill-used { margin-top: 22px; padding-top: 14px; border-top: 1px dashed var(--border); font-family: var(--mono); font-size: 12px; color: var(--dim); }
-
 /* Projects (compact) ----------------------------------------------------- */
 .pgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .pcard { display: flex; flex-direction: column; gap: 8px; padding: 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); transition: border-color .3s, transform .3s; }
@@ -364,15 +346,15 @@ details .contrib { margin-top: 8px; }
 .closing .t-prompt { color: var(--green); margin-right: 8px; user-select: none; }
 .cursor { display: inline-block; width: 8px; height: 1.05em; margin-left: 2px; vertical-align: -2px; background: var(--green); animation: blink 1.05s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
-.contact-wide { grid-column: 1 / -1; }
-.contact-wide span { overflow-wrap: normal; white-space: nowrap; }
-.contact-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.contact-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-content: center; }
 .contact-item { display: flex; align-items: center; gap: 8px; min-width: 0; border-radius: 11px; border: 1px solid var(--border); background: rgba(255, 255, 255, .02); transition: border-color .2s, transform .2s, background .2s; }
 .contact-item:hover { border-color: rgba(34, 211, 238, .5); background: rgba(34, 211, 238, .05); transform: translateY(-2px); }
 .contact-list a { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 14px; color: var(--text); border-radius: 11px; }
 .contact-list a:hover { color: #fff; }
 .contact-list .ic { color: var(--cyan); width: 20px; height: 20px; }
-.contact-list span { display: flex; flex-direction: column; min-width: 0; font-size: 14px; overflow-wrap: anywhere; }
+.contact-list span { display: flex; flex-direction: column; min-width: 0; font-size: 14px; }
+.contact-list span b { font-weight: 500; font-size: 14.5px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.contact-item { min-height: 66px; }
 .copy-btn { flex-shrink: 0; margin-right: 12px; min-height: 32px; padding: 4px 10px; border-radius: 7px; border: 1px solid rgba(34, 211, 238, .4); background: transparent; color: var(--cyan); font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
 .copy-btn:hover { background: rgba(34, 211, 238, .12); color: #fff; }
 .copy-btn.copied { color: var(--green); border-color: rgba(52, 211, 153, .5); }
@@ -418,9 +400,6 @@ details .contrib { margin-top: 8px; }
    .profile-banner { grid-template-columns: minmax(0, 1fr); }
    .pb-photo { min-height: 0; aspect-ratio: 16 / 10; }
    .pb-photo::after { background: linear-gradient(180deg, transparent 60%, rgba(14, 19, 29, .9)); }
-   .skills { grid-template-columns: minmax(0, 1fr); }
-   .skill-tabs { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--border); scrollbar-width: thin; }
-   .skill-tab { width: auto; flex-shrink: 0; white-space: nowrap; }
    .nav-toggle { display: grid; }
    .nav-menu {
       position: fixed; top: var(--nav-h); left: 0; right: 0;
@@ -455,8 +434,6 @@ details .contrib { margin-top: 8px; }
    .certs { grid-template-columns: minmax(0, 1fr); }
    .cert img { width: 60px; height: 60px; }
    .pgrid { grid-template-columns: minmax(0, 1fr); }
-   .skill-panel { padding: 20px 16px; }
-   .contact-wide span { white-space: normal; }
    .container { padding: 0 16px; }
    .section { padding: 68px 0; }
    .section-head { margin-bottom: 30px; }
@@ -484,7 +461,6 @@ details .contrib { margin-top: 8px; }
    .stage-desc b { display: block; font-family: var(--mono); font-size: 11.5px; font-weight: 500; color: var(--cyan); }
    .stage-panel { display: none; }
    .contact-card { padding: 24px 18px; }
-   .contact-list { grid-template-columns: minmax(0, 1fr); }
    .arch-modal .diagram, .release { margin-left: 14px; margin-right: 14px; }
    .arch-note { margin: 14px; }
 }

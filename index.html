@@ -20,8 +20,8 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
    <script>document.documentElement.classList.add('js')</script>
-   <link rel="stylesheet" href="css/portfolio.css?v=05b7b654">
-   <script src="js/portfolio.js?v=05b7b654" defer></script>
+   <link rel="stylesheet" href="css/portfolio.css?v=85d00b3b">
+   <script src="js/portfolio.js?v=85d00b3b" defer></script>
 </head>
 
 <body>
@@ -83,7 +83,6 @@
             <a href="#about">About</a>
             <a href="#home">Home</a>
             <a href="#infrastructure">Infrastructure</a>
-            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <a class="btn btn-primary btn-sm js-resume-item js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download>
@@ -284,86 +283,11 @@
       </div>
    </section>
 
-   <!-- ============ SKILLS ============ -->
-   <section class="section" id="skills">
-      <div class="container">
-         <header class="section-head">
-            <span class="kicker">03 · skills</span>
-            <h2>DevOps skill matrix.</h2>
-            <p>Grouped around the technologies and practices used to build, deploy and operate production systems.</p>
-         </header>
-         <div class="skills reveal">
-            <div class="skill-tabs" role="tablist" aria-label="Skill categories">
-               <button class="skill-tab" type="button" role="tab" id="sk-0-tab" aria-controls="sk-0" aria-selected="true"><svg class="ic"><use href="#i-cloud"/></svg><span>Cloud · AWS</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-1-tab" aria-controls="sk-1" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-layers"/></svg><span>Infrastructure as Code</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-2-tab" aria-controls="sk-2" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-container"/></svg><span>Containers</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-3-tab" aria-controls="sk-3" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-pipeline"/></svg><span>CI/CD</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-4-tab" aria-controls="sk-4" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-monitor"/></svg><span>Monitoring &amp; Reliability</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-5-tab" aria-controls="sk-5" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-shield"/></svg><span>Security &amp; Compliance</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-6-tab" aria-controls="sk-6" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-network"/></svg><span>Networking</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-7-tab" aria-controls="sk-7" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-terminal"/></svg><span>OS &amp; Scripting</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-8-tab" aria-controls="sk-8" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-cost"/></svg><span>FinOps</span></button>
-               <button class="skill-tab" type="button" role="tab" id="sk-9-tab" aria-controls="sk-9" aria-selected="false" tabindex="-1"><svg class="ic"><use href="#i-db"/></svg><span>Databases</span></button>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-0" aria-labelledby="sk-0-tab">
-               <h3>Cloud · AWS</h3>
-               <ul class="chips"><li>EC2</li><li>VPC</li><li>S3</li><li>IAM</li><li>ALB / ELB</li><li>Auto Scaling</li><li>Launch Templates</li><li>ECS</li><li>ECR</li><li>Lambda</li><li>Secrets Manager</li><li>AWS Config</li><li>SNS</li><li>AWS CLI</li></ul>
-               <p class="skill-used">used at · Quralyst AI · Thinkbiz · Genericure</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-1" aria-labelledby="sk-1-tab" hidden>
-               <h3>Infrastructure as Code</h3>
-               <ul class="chips"><li class="hot">Terraform</li><li>Multi-environment</li><li>Dev · Staging · Prod</li></ul>
-               <p class="skill-used">used at · Thinkbiz</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-2" aria-labelledby="sk-2-tab" hidden>
-               <h3>Containers</h3>
-               <ul class="chips"><li class="hot">Docker</li><li>Docker Compose</li><li>Amazon ECS</li><li>Amazon ECR</li><li>Container logging</li></ul>
-               <p class="skill-used">used at · Quralyst AI · Thinkbiz</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-3" aria-labelledby="sk-3-tab" hidden>
-               <h3>CI/CD</h3>
-               <ul class="chips"><li>AWS CodePipeline</li><li class="hot">AWS CodeBuild</li><li class="hot">AWS CodeDeploy</li><li>GitHub Actions</li><li class="hot">GitLab CI/CD</li><li>Git</li><li>Rollback handling</li></ul>
-               <p class="skill-used">used at · Quralyst AI · Thinkbiz</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-4" aria-labelledby="sk-4-tab" hidden>
-               <h3>Monitoring &amp; Reliability</h3>
-               <ul class="chips"><li class="hot">CloudWatch</li><li>Logs &amp; dashboards</li><li>Alarms</li><li>SNS alerting</li><li>Health checks</li><li>Uptime Kuma</li><li>MS Teams alerts</li><li>Disaster recovery</li></ul>
-               <p class="skill-used">used at · Quralyst AI · Thinkbiz · Genericure</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-5" aria-labelledby="sk-5-tab" hidden>
-               <h3>Security &amp; Compliance</h3>
-               <ul class="chips"><li>IAM least privilege</li><li>Secrets Manager</li><li>KMS encryption</li><li>AWS Config</li><li>Vulnerability checks</li><li>Audit trails</li></ul>
-               <p class="skill-used">used at · Quralyst AI · Thinkbiz</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-6" aria-labelledby="sk-6-tab" hidden>
-               <h3>Networking</h3>
-               <ul class="chips"><li>Subnets &amp; route tables</li><li>Security groups</li><li>Load balancing</li><li>Nginx reverse proxy</li><li>SSL/TLS</li><li>DNS &amp; domains</li><li>SMTP</li></ul>
-               <p class="skill-used">used at · Quralyst AI</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-7" aria-labelledby="sk-7-tab" hidden>
-               <h3>OS &amp; Scripting</h3>
-               <ul class="chips"><li class="hot">Linux / Unix</li><li>Bash</li><li>Shell scripting</li><li>Python</li></ul>
-               <p class="skill-used">used at · Thinkbiz · Genericure</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-8" aria-labelledby="sk-8-tab" hidden>
-               <h3>FinOps</h3>
-               <ul class="chips"><li>AWS Budgets</li><li>Cost Explorer</li><li>Cost anomaly detection</li><li>Right-sizing</li></ul>
-               <p class="skill-used">used at · Thinkbiz · Genericure</p>
-            </div>
-            <div class="skill-panel" role="tabpanel" id="sk-9" aria-labelledby="sk-9-tab" hidden>
-               <h3>Databases</h3>
-               <ul class="chips"><li>Amazon RDS</li><li>Aurora</li><li>Migrations</li><li>Version upgrades</li></ul>
-               <p class="skill-used">used at · Thinkbiz</p>
-            </div>
-         </div>
-      </div>
-   </section>
-
    <!-- ============ PROJECTS ============ -->
    <section class="section section-alt" id="projects">
       <div class="container">
          <header class="section-head">
-            <span class="kicker">04 · projects</span>
+            <span class="kicker">03 · projects</span>
             <h2>Infrastructure projects.</h2>
             <p>Real engineering work — source on <a href="https://github.com/Girish7010" target="_blank" rel="noopener">GitHub</a>, write-ups on <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener">Medium</a>.</p>
          </header>
@@ -435,7 +359,7 @@
    <section class="section" id="experience">
       <div class="container">
          <header class="section-head">
-            <span class="kicker">05 · experience</span>
+            <span class="kicker">04 · experience</span>
             <h2>Engineering timeline.</h2>
             <p>Content mirrors <a class="js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download>my CV</a>. Total: <b class="js-exp-exact">5+ years</b>.</p>
          </header>
@@ -525,25 +449,33 @@
       <div class="container">
          <div class="contact-card reveal">
             <div class="contact-copy">
-               <span class="kicker">06 · contact</span>
+               <span class="kicker">05 · contact</span>
                <h2>Let's build reliable infrastructure.</h2>
                <p>Open to <b>DevOps Engineer</b>, <b>Cloud Engineer</b> and <b>FinOps Engineer</b> roles — remote, hybrid or on-site in India.</p>
                <pre class="closing" aria-label="Closing message"><span class="t-prompt">&gt;</span> Ready to build reliable infrastructure.
 <span class="t-prompt">&gt;</span> Let's connect.<span class="cursor" aria-hidden="true"></span></pre>
             </div>
             <ul class="contact-list">
-               <li class="contact-item contact-wide">
-                  <a href="mailto:girishburade@gmail.com"><svg class="ic"><use href="#i-mail"/></svg><span><small>email</small>girishburade@gmail.com</span></a>
+               <li class="contact-item">
+                  <a href="mailto:girishburade@gmail.com"><svg class="ic"><use href="#i-mail"/></svg><span><small>email</small><b>girishburade@gmail.com</b></span></a>
                   <button class="copy-btn" type="button" data-copy="girishburade@gmail.com" aria-label="Copy email address">Copy</button>
                </li>
-               <li class="contact-item"><a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg><span><small>linkedin</small>in/girish-burade</span></a></li>
-               <li class="contact-item"><a href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg><span><small>github</small>Girish7010</span></a></li>
-               <li class="contact-item js-resume-item"><a class="js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg><span><small>resume</small>Download PDF</span></a></li>
-               <li class="contact-item contact-wide">
-                  <a href="tel:+918668846084"><svg class="ic"><use href="#i-phone"/></svg><span><small>phone</small>+91 86688 46084</span></a>
+               <li class="contact-item">
+                  <a href="tel:+918668846084"><svg class="ic"><use href="#i-phone"/></svg><span><small>phone</small><b>+91 86688 46084</b></span></a>
                   <button class="copy-btn" type="button" data-copy="+918668846084" aria-label="Copy phone number">Copy</button>
                </li>
-               <li class="contact-item"><a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pen"/></svg><span><small>blog</small>Medium</span></a></li>
+               <li class="contact-item">
+                  <a href="https://www.linkedin.com/in/girish-burade-895a75230/" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin"/></svg><span><small>linkedin</small><b>in/girish-burade</b></span></a>
+               </li>
+               <li class="contact-item">
+                  <a href="https://github.com/Girish7010" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github"/></svg><span><small>github</small><b>Girish7010</b></span></a>
+               </li>
+               <li class="contact-item js-resume-item">
+                  <a class="js-resume-link" href="docs/Girish_Devops_update_CV.pdf" download><svg class="ic"><use href="#i-download"/></svg><span><small>resume</small><b>Download PDF</b></span></a>
+               </li>
+               <li class="contact-item">
+                  <a href="https://medium.com/@girishburade30792" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pen"/></svg><span><small>blog</small><b>Medium</b></span></a>
+               </li>
             </ul>
          </div>
       </div>
